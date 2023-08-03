@@ -11,7 +11,6 @@
 	box-sizing: border-box;
 	border: 0;
 }
-
 body {
 	background-image: url(fotos/pexels01.jpg);
 	background-repeat: no-repeat;
@@ -31,7 +30,7 @@ body {
 }
 
 .logo {
-	display: block;
+	display: block; /* no cambiar */
 	margin-left: 20px;
 }
 
