@@ -1,26 +1,3 @@
-/*
-* RESET
-*/
-@font-face {
-	font-family: 'Grandeurs';
-	src: url('fonts/grandeurs.otf') format('opentype');
-}
-
-:root {
-	--sides: 4%;
-}
-
-*,
-*:before,
-*:after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	border: 0;
-}
-a img {
-	max-width: 100%;
-}
 /* unidades relativas: em, rem, vh, vw, % */
 /* unidades absolutas: px, cm, mm, pt, in */
 html,
