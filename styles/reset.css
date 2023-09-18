@@ -5,9 +5,33 @@
 	font-family: 'Grandeurs';
 	src: url('fonts/grandeurs.otf') format('opentype');
 }
+
 :root {
-	--sides: 4%;
+	/* transitions */
+	--trans__on: 0.4s ease-out;
+	--trans__off: 0.4s ease-in;
+
+	/* sizing / spacing */
+	--sp__sides: 4%;
+	--sp__around: 2rem;
 	--fsz__base: 16px;
+	/* --lh__base: #{fonts.$lh__base};
+	--fsz__small: #{fonts.$fsz__small};
+	// fonts
+	--font__base: #{fonts.$font__base};
+	--font__headings: #{fonts.$font__headings};
+	--font__brand: #{fonts.$font__brand}; */
+	/* Schemes */
+	/* Default theme */
+	--bg-color: #151539;
+	--txt-color: #ce41f9;
+	--txt-color--alt: #e07afe;
+	/* [data-theme='dark'] {
+		color-scheme: dark;
+		--bg-color: #222;
+		--txt-color: #eee;
+		--txt-color--alt: #203349;
+	} */
 }
 html {
 	box-sizing: border-box;
@@ -36,6 +60,7 @@ pre {
 	margin: 0;
 }
 body {
+	/* font-family: var(--font__base); */
 	font-size: var(--fsz__base);
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
@@ -82,3 +107,8 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+svg {
+	fill: currentColor;
+}
+/*  Estilos base */
