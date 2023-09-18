@@ -11,6 +11,11 @@
 	box-sizing: border-box;
 	border: 0;
 }
+
+img {
+	max-width: 100%;
+}
+
 body {
 	background-image: url(fotos/pexels01.jpg);
 	background-repeat: no-repeat;
@@ -116,7 +121,6 @@ body {
 	width: 100%;
 	margin: auto;
 	overflow: hidden;
-	max-width: 900px;
 }
 
 .carrousel {
