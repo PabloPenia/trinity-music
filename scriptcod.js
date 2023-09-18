@@ -30,3 +30,4 @@ carrousel.addEventListener('mouseenter', () => {
 carrousel.addEventListener('mouseleave', () => {
 	slideTimer = setInterval(nextSlide, slideInterval)
 })
+//pto el que lo lee
