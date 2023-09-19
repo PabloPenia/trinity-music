@@ -137,6 +137,8 @@ body {
 	object-fit: cover;
 }
 
+/* esto agregé */
+
 .instrumentos{
 	display: flex;
 	justify-content: space-between;
