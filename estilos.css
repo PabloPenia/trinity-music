@@ -1,13 +1,6 @@
-/*
-* RESET
-*/
 @font-face {
 	font-family: 'Grandeurs';
 	src: url('fonts/grandeurs.otf') format('opentype');
-}
-
-:root {
-	--sides: 4%;
 }
 
 *,
@@ -18,51 +11,39 @@
 	box-sizing: border-box;
 	border: 0;
 }
-a img {
+
+img {
 	max-width: 100%;
 }
-/* unidades relativas: em, rem, vh, vw, % */
-/* unidades absolutas: px, cm, mm, pt, in */
-html,
-body {
-	width: 100vw;
-	min-height: 100vh;
-}
 
-.main-container {
-	width: 100%;
-	height: 100%;
-	background-image: url('fotos/pexels01.jpg');
+body {
+	background-image: url(fotos/pexels01.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
-/*
-* HEADER
-*/
+
 .header {
-	/* margin: 5px 10px 20px 10px; top right bottom left sentido horario */
-	padding: 1em var(--sides);
 	opacity: 0.96;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	height: 80px;
 	background: #151539;
 	width: 100%;
 	z-index: 100;
 }
-.main-container > section {
-	padding: 0 var(--sides);
-}
+
 .logo {
 	display: block; /* no cambiar */
+	margin-left: 20px;
 }
 
 .logo a {
 	font-family: 'Grandeurs';
 	color: #ce41f9;
 	text-decoration: none;
-	font-size: 1.5em;
+	font-size: 50px;
 }
 .menu {
 	display: flex;
@@ -101,8 +82,9 @@ body {
 }
 
 .contacto h2 {
+	/*margin-left: 128%;*/
 	font-family: 'Grandeurs';
-	text-align: center;
+	text-align: left;
 	color: #ce41f9;
 }
 
@@ -121,9 +103,11 @@ body {
 
 .botones li {
 	list-style: none;
+	line-height: 5ex;
 }
 
 .botones a {
+	font-size: 15px;
 	font-family: verdana;
 	text-decoration: none;
 	color: #ce41f9;
@@ -134,16 +118,32 @@ body {
 }
 
 .contenedor-carrousel {
+	width: 100%;
+	margin: auto;
 	overflow: hidden;
 }
 
 .carrousel {
 	display: flex;
+	width: 300%;
 	height: 600px;
+	transition: transform 0.05s ease;
 }
 
 .carrousel img {
 	display: block;
 	width: 100%;
 	height: auto;
+	object-fit: cover;
+}
+
+.instrumentos{
+	display: flex;
+	justify-content: space-between;
+	background-color: #151539;
+	margin: 0.50em;
+}
+
+.box h2 {
+	color: #ce41f9;
 }
