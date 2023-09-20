@@ -1,3 +1,4 @@
+<<<<<<< HEAD:estilos.css
 @font-face {
 	font-family: 'Grandeurs';
 	src: url('fonts/grandeurs.otf') format('opentype');
@@ -11,24 +12,44 @@
 	box-sizing: border-box;
 	border: 0;
 }
+
+img {
+	max-width: 100%;
+}
+
 body {
 	background-image: url(fotos/pexels01.jpg);
 	background-repeat: no-repeat;
+=======
+/* unidades relativas: em, rem, vh, vw, % */
+/* unidades absolutas: px, cm, mm, pt, in */
+.main-container {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 100vh;
+	/* background-image: url('../fotos/pexels01.jpg'); */
+	/* background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: fixed; */
 }
-
+main {
+	flex: 1;
+}
+/*
+* HEADER
+*/
 .header {
+	/* margin: 5px 10px 20px 10px; top right bottom left sentido horario */
+	padding: 1em var(--sp__sides);
 	opacity: 0.96;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
-	background: #151539;
+	background: var(--bg-color);
 	width: 100%;
 	z-index: 100;
 }
-
 .logo {
 	display: block; /* no cambiar */
 	margin-left: 20px;
@@ -36,37 +57,29 @@ body {
 
 .logo a {
 	font-family: 'Grandeurs';
-	color: #ce41f9;
+	color: var(--txt-color);
 	text-decoration: none;
 	font-size: 50px;
 }
-.menu {
-	display: flex;
-	margin-right: 20px;
-}
-
-.menu a {
-	display: block;
-	padding: 10px;
-	font-family: 'Grandeurs';
-	color: #ce41f9;
-	text-decoration: none;
-	font-size: 20px;
-}
 
 .logo a:hover {
-	color: #e07afe;
+	color: var(--txt-color--alt);
 }
 
 .menu a:hover {
-	color: #e07afe;
+	color: var(--txt-color--alt);
+}
+
+.instrumentos{ /*--just did this */
+	
 }
 
 .contenedor-footer {
+	margin-top: auto;
 	opacity: 0.96;
 	justify-content: space-between;
 	display: flex;
-	background-color: #151539;
+	background-color: var(--bg-color);
 	height: 250px;
 	width: 100%;
 	align-items: center;
@@ -76,15 +89,20 @@ body {
 	margin-left: 40px;
 }
 
-.contacto h1 {
-	margin-left: 128%;
+.contacto h2 {
+	/*margin-left: 128%;*/
 	font-family: 'Grandeurs';
+<<<<<<< HEAD:estilos.css
 	text-align: left;
 	color: #ce41f9;
+=======
+	text-align: center;
+	color: var(--txt-color);
+>>>>>>> 8786fa22ffc777d483c84f8e25f698f29db8996f:styles/home.css
 }
 
 .contacto ul li {
-	color: #ce41f9;
+	color: var(--txt-color);
 	margin: 30px;
 	font-family: verdana;
 	list-style: none;
@@ -105,18 +123,17 @@ body {
 	font-size: 15px;
 	font-family: verdana;
 	text-decoration: none;
-	color: #ce41f9;
+	color: var(--txt-color);
 }
 
 .botones a:hover {
-	color: #e07afe;
+	color: var(--txt-color--alt);
 }
 
 .contenedor-carrousel {
 	width: 100%;
 	margin: auto;
 	overflow: hidden;
-	max-width: 900px;
 }
 
 .carrousel {
@@ -131,4 +148,30 @@ body {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
+}
+
+<<<<<<< HEAD:estilos.css
+/* esto agregé */
+
+.instrumentos{
+	display: flex;
+	justify-content: space-between;
+	background-color: #151539;
+	margin: 0.50em;
+}
+
+.box h2 {
+	color: #ce41f9;
+}
+=======
+/* 
+* SLIDESHOW
+*/
+.slideshow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
 }
