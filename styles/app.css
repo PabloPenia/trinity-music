@@ -91,3 +91,17 @@
 .menu > li:hover .submenu {
 	display: block;
 }
+.cart {
+	position: relative;
+}
+.cart > ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 200%;
+	background: var(--bg-color);
+}
+/* TODO: refactorizar */
+.cart > button:hover + ul {
+	display: block;
+}
