@@ -1,58 +1,10 @@
-<<<<<<< HEAD:estilos.css
-@font-face {
-	font-family: 'Grandeurs';
-	src: url('fonts/grandeurs.otf') format('opentype');
-}
-
-*,
-*:before,
-*:after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	border: 0;
-}
-
-img {
-	max-width: 100%;
-}
-
-body {
-	background-image: url(fotos/pexels01.jpg);
-	background-repeat: no-repeat;
-=======
 /* unidades relativas: em, rem, vh, vw, % */
 /* unidades absolutas: px, cm, mm, pt, in */
-.main-container {
-	display: flex;
-	flex-direction: column;
-	width: 100vw;
-	min-height: 100vh;
-	/* background-image: url('../fotos/pexels01.jpg'); */
-	/* background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed; */
-}
-main {
-	flex: 1;
-}
 /*
 * HEADER
 */
-.header {
-	/* margin: 5px 10px 20px 10px; top right bottom left sentido horario */
-	padding: 1em var(--sp__sides);
-	opacity: 0.96;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: var(--bg-color);
-	width: 100%;
-	z-index: 100;
-}
 .logo {
 	display: block; /* no cambiar */
-	margin-left: 20px;
 }
 
 .logo a {
@@ -70,8 +22,8 @@ main {
 	color: var(--txt-color--alt);
 }
 
-.instrumentos{ /*--just did this */
-	
+.instrumentos {
+	/*--just did this */
 }
 
 .contenedor-footer {
@@ -90,15 +42,9 @@ main {
 }
 
 .contacto h2 {
-	/*margin-left: 128%;*/
 	font-family: 'Grandeurs';
-<<<<<<< HEAD:estilos.css
-	text-align: left;
-	color: #ce41f9;
-=======
 	text-align: center;
 	color: var(--txt-color);
->>>>>>> 8786fa22ffc777d483c84f8e25f698f29db8996f:styles/home.css
 }
 
 .contacto ul li {
@@ -116,7 +62,6 @@ main {
 
 .botones li {
 	list-style: none;
-	line-height: 5ex;
 }
 
 .botones a {
@@ -150,20 +95,18 @@ main {
 	object-fit: cover;
 }
 
-<<<<<<< HEAD:estilos.css
 /* esto agregé */
 
-.instrumentos{
+.instrumentos {
 	display: flex;
 	justify-content: space-between;
 	background-color: #151539;
-	margin: 0.50em;
+	margin: 0.5em;
 }
 
 .box h2 {
 	color: #ce41f9;
 }
-=======
 /* 
 * SLIDESHOW
 */
