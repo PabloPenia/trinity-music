@@ -1,32 +1,9 @@
 /* unidades relativas: em, rem, vh, vw, % */
 /* unidades absolutas: px, cm, mm, pt, in */
-.main-container {
-	display: flex;
-	flex-direction: column;
-	width: 100vw;
-	min-height: 100vh;
-	/* background-image: url('../fotos/pexels01.jpg'); */
-	/* background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed; */
-}
-main {
-	flex: 1;
-}
 /*
 * HEADER
 */
-.header {
-	/* margin: 5px 10px 20px 10px; top right bottom left sentido horario */
-	padding: 1em var(--sp__sides);
-	opacity: 0.96;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: var(--bg-color);
-	width: 100%;
-	z-index: 100;
-}
+
 .logo {
 	display: block; /* no cambiar */
 }
@@ -36,19 +13,6 @@ main {
 	color: var(--txt-color);
 	text-decoration: none;
 	font-size: 1.5em;
-}
-.menu {
-	display: flex;
-	margin-right: 20px;
-}
-
-.menu a {
-	display: block;
-	padding: 10px;
-	font-family: 'Grandeurs';
-	color: var(--txt-color);
-	text-decoration: none;
-	font-size: 20px;
 }
 
 .logo a:hover {

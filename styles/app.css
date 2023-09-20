@@ -1,0 +1,93 @@
+.sprite {
+	display: none;
+}
+/* SVG */
+.icon {
+	display: block;
+	position: relative;
+	height: 0;
+	width: 3rem;
+	padding-top: 3rem;
+}
+.icon > svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* ESTRUCTURA PRINCIPAL */
+.app-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	/* background-image: url('../fotos/pexels01.jpg'); */
+	/* background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; */
+}
+.app-wrapper > main {
+	flex: 1;
+}
+.app-wrapper > header {
+	/* margin: 5px 10px 20px 10px; top right bottom left sentido horario */
+	padding: 0.4em var(--sp__sides);
+	opacity: 0.96;
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--bg-color);
+	width: 100%;
+}
+.search {
+	position: relative;
+	max-width: 60rem;
+	flex: 1;
+}
+.search input {
+	width: 100%;
+	padding: 0.4em 2em;
+}
+.search .icon {
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	transform: translateY(-50%);
+}
+/* NAVEGACION PRINCIPAL */
+.navigation {
+	display: flex;
+	justify-content: center;
+	gap: 0.5em;
+	align-items: center;
+	color: white;
+}
+.menu {
+	display: flex;
+	gap: 0.5em;
+}
+.menu > li {
+	position: relative;
+}
+.menu a {
+	display: block;
+	padding: 10px;
+	font-family: 'Grandeurs';
+	color: var(--txt-color);
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.submenu {
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: var(--bg-color);
+}
+.menu > li:hover .submenu {
+	display: block;
+}

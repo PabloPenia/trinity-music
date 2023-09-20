@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/app.css" />
   <link rel="stylesheet" href="styles/home.css" />
   <link rel="icon" href="fotos/logo.ico">
   <!-- <script src="scriptcod.js" defer></script> -->
@@ -12,32 +13,81 @@
 </head>
 
 <body>
-  <div class="main-container">
-    <header class="header">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="sprite">
+    <defs>
+      <symbol id="search-icon" viewBox="0 0 16 16">
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+      </symbol>
+      <symbol id="cart-icon" viewBox="0 0 16 16">
+        <path
+          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+      </symbol>
+    </defs>
+  </svg>
+  <div class="app-wrapper">
+    <header>
       <h1 class="logo">
         <a href="/">TrinityMusic</a>
       </h1>
-      <nav class="menu">
-        <a href="#">Instrumentos</a>
-        <a href="#">Musicos</a>
-        <a href="#">Quienes somos</a>
-      </nav>
-    </header>
-    <!-- <main>
-      <section class="slideshow">
-        <img src="fotos/showcase/01.jpg" alt="">
-      </section>
-    </main> -->
+      <div class="search">
+        <input type="search" placeholder="Qué estás buscando?">
+        <button id="search-btn" class="icon">
+          <svg>
+            <use href='#search-icon' />
+          </svg>
+        </button>
+      </div>
+      <div class="navigation">
+        <nav>
+        </nav>
+        <ul class="menu">
+          <li><a href="#">Instrumentos</a>
+            <ul class="submenu">
+              <li><a href="#">Guitarra</a></li>
+              <li><a href="#">Bajo</a></li>
+              <li><a href="#">Percusión</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Accesorios</a>
+            <ul class="submenu">
+              <li><a href="#">Guitarra</a></li>
+              <li><a href="#">Bajo</a></li>
+              <li><a href="#">Percusión</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button id="search-btn" class="icon">
+          <svg>
+            <use href='#cart-icon' />
+          </svg>
+        </button>
+        <div class="cart">
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+      </div>
 
-    <section class="contenedor-carrousel">
+    </header>
+    <main>
+      <h1>El Slideshow te lo debo</h1>
+      <!-- <section class="slideshow">
+        <img src="fotos/showcase/01.jpg" alt="">
+      </section> -->
+    </main>
+
+    <!-- <section class="contenedor-carrousel">
       <div class="carrousel">
         <img src="fotos/showcase/01.jpg" alt="">
-        <!-- <img src="fotos/showcase/02.jpg" alt="">
+        <img src="fotos/showcase/02.jpg" alt="">
             <img src="fotos/showcase/03.jpg" alt="">
             <img src="fotos/showcase/04.jpg" alt="">
-            <img src="fotos/showcase/05.jpg" alt=""> -->
-      </div>
-    </section>
+            <img src="fotos/showcase/05.jpg" alt="">
+  </div>
+  </section> -->
     <footer class="contenedor-footer">
       <div class="contacto">
         <h2>Contacto</h2>
