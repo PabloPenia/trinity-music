@@ -30,37 +30,26 @@ body {
 	min-height: 100vh;
 	/* background-image: url('../fotos/pexels01.jpg'); */
 	/* background-repeat: no-repeat;
->>>>>>> 8786fa22ffc777d483c84f8e25f698f29db8996f:styles/home.css
 	background-size: cover;
 	background-attachment: fixed; */
 }
 main {
 	flex: 1;
 }
-
+/*
+* HEADER
+*/
 .header {
-<<<<<<< HEAD:estilos.css
-=======
 	/* margin: 5px 10px 20px 10px; top right bottom left sentido horario */
 	padding: 1em var(--sp__sides);
->>>>>>> 8786fa22ffc777d483c84f8e25f698f29db8996f:styles/home.css
 	opacity: 0.96;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-<<<<<<< HEAD:estilos.css
-	height: 80px;
-	background: #151539;
-	width: 100%;
-	z-index: 100;
-}
-
-=======
 	background: var(--bg-color);
 	width: 100%;
 	z-index: 100;
 }
->>>>>>> 8786fa22ffc777d483c84f8e25f698f29db8996f:styles/home.css
 .logo {
 	display: block; /* no cambiar */
 	margin-left: 20px;
@@ -71,19 +60,6 @@ main {
 	color: var(--txt-color);
 	text-decoration: none;
 	font-size: 50px;
-}
-.menu {
-	display: flex;
-	margin-right: 20px;
-}
-
-.menu a {
-	display: block;
-	padding: 10px;
-	font-family: 'Grandeurs';
-	color: var(--txt-color);
-	text-decoration: none;
-	font-size: 20px;
 }
 
 .logo a:hover {
@@ -199,4 +175,3 @@ main {
 	height: 100vh;
 	z-index: -1;
 }
->>>>>>> 8786fa22ffc777d483c84f8e25f698f29db8996f:styles/home.css
