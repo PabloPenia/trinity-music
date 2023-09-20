@@ -1,0 +1,114 @@
+/*
+* RESET
+*/
+@font-face {
+	font-family: 'Grandeurs';
+	src: url('fonts/grandeurs.otf') format('opentype');
+}
+
+:root {
+	/* transitions */
+	--trans__on: 0.4s ease-out;
+	--trans__off: 0.4s ease-in;
+
+	/* sizing / spacing */
+	--sp__sides: 4%;
+	--sp__around: 2rem;
+	--fsz__base: 16px;
+	/* --lh__base: #{fonts.$lh__base};
+	--fsz__small: #{fonts.$fsz__small};
+	// fonts
+	--font__base: #{fonts.$font__base};
+	--font__headings: #{fonts.$font__headings};
+	--font__brand: #{fonts.$font__brand}; */
+	/* Schemes */
+	/* Default theme */
+	--bg-color: #151539;
+	--txt-color: #ce41f9;
+	--txt-color--alt: #e07afe;
+	/* [data-theme='dark'] {
+		color-scheme: dark;
+		--bg-color: #222;
+		--txt-color: #eee;
+		--txt-color--alt: #203349;
+	} */
+}
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body,
+blockquote,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+p,
+pre {
+	margin: 0;
+}
+body {
+	/* font-family: var(--font__base); */
+	font-size: var(--fsz__base);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	overflow-wrap: break-word;
+}
+
+img,
+video,
+canvas,
+svg {
+	max-width: 100%;
+}
+
+ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+button {
+	border: 0;
+	outline: 0;
+	background: unset;
+	color: currentColor;
+	cursor: pointer;
+}
+
+button,
+input,
+textarea,
+select {
+	font: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+svg {
+	fill: currentColor;
+}
+/*  Estilos base */
