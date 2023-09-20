@@ -133,3 +133,7 @@ main {
 	height: 100vh;
 	z-index: -1;
 }
+
+#seccion {
+	display: none;
+}
