@@ -1,3 +1,11 @@
+/* UTILS */
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
 .sprite {
 	display: none;
 }
@@ -18,6 +26,21 @@
 }
 /* ESTRUCTURA PRINCIPAL */
 .app-wrapper {
+	background-image: linear-gradient(
+		to right bottom,
+		#1e1e40,
+		#242448,
+		#292950,
+		#2f2f58,
+		#353560,
+		#353560,
+		#353560,
+		#353560,
+		#2f2f58,
+		#292950,
+		#242448,
+		#1e1e40
+	);
 	display: flex;
 	flex-direction: column;
 	width: 100%;

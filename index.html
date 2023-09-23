@@ -15,6 +15,14 @@
 <body>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="sprite">
     <defs>
+      <symbol id="left-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+      </symbol>
+      <symbol id="right-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+      </symbol>
       <symbol id="search-icon" viewBox="0 0 16 16">
         <path
           d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -73,29 +81,33 @@
 
     </header>
     <main>
-      <!-- <section class="slideshow">
-        <img src="fotos/showcase/01.jpg" alt="">
-      </section> -->
-      <section class="contenedor-carrousel">
-        <div class="carrousel">
-          <img src="fotos/showcase/01.jpg" alt="">
-          <img src="fotos/showcase/02.jpg" alt="">
+      <section class="flex slideshow">
+        <div class="slideshow__btn">
+          <button class="icon">
+            <svg>
+              <use href='#left-icon' />
+            </svg>
+          </button>
+        </div>
+        <figure class="flex">
           <img src="fotos/showcase/03.jpg" alt="">
-          <img src="fotos/showcase/04.jpg" alt="">
-          <img src="fotos/showcase/05.jpg" alt="">
+          <figcaption>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reiciendis alias sapiente dolores velit
+              nihil quasi blanditiis nisi commodi pariatur hic et corrupti eos soluta praesentium repellat, laborum ipsa
+              necessitatibus!</p>
+            <button>Click this thing and buy stuff</button>
+          </figcaption>
+        </figure>
+        <div class="slideshow__btn">
+          <button class="icon">
+            <svg>
+              <use href='#right-icon' />
+            </svg>
+          </button>
         </div>
       </section>
     </main>
-
-    <!-- <section class="contenedor-carrousel"> -->
-    <!-- <div class="carrousel"> -->
-    <!-- <img src="fotos/showcase/01.jpg" alt=""> -->
-    <!-- <img src="fotos/showcase/02.jpg" alt="">
-            <img src="fotos/showcase/03.jpg" alt="">
-            <img src="fotos/showcase/04.jpg" alt="">
-            <img src="fotos/showcase/05.jpg" alt=""> -->
-    <!-- </div> -->
-    <!-- </section> -->
     <footer class="contenedor-footer">
       <div class="contacto">
         <h2>Contacto</h2>
