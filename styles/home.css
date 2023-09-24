@@ -81,9 +81,53 @@
 	height: 600px;
 }
 
-.img{
-	
+/* GALERIA */
+.btn {
+	padding: 0.5em;
+	display: inline-block;
+	/* background: var(--color__primary); */
+	/* box-shadow: 0 0 3px var(--color__shadow--dark), -1px -1px 5px var(--color__shadow--dark), -1px -1px 3px var(--color__shadow--light) inset; */
+	/* color: var(--color__secondary); */
+	transition: var(--transition__on);
+	border-radius: 1rem;
 }
+/* .btn--inverted {
+  background-color: var(--color__primary);
+  box-shadow: 0 0 3px var(--color__shadow--light);
+  color: var(--color__secondary);
+} */
+.btn:hover {
+	transform: scale(1.2);
+	transition: var(--transition__off);
+}
+.cards-gallery {
+	flex-wrap: wrap;
+	gap: 2em;
+}
+.cards-gallery > article {
+	position: relative;
+}
+.cards-gallery > article button {
+	position: absolute;
+	right: 10px;
+	bottom: 50px;
+}
+.cards-gallery > article button .icon {
+	width: 4rem;
+	padding-top: 4rem;
+}
+.cards-gallery img {
+	min-width: 300px;
+}
+.card__title {
+	padding: 0 0.2em;
+	justify-content: space-between;
+}
+.card__title span {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
 .box {
 	color: var(--txt-color);
 	/*border: solid red;
@@ -168,7 +212,6 @@
 	height: auto;
 	object-fit: cover;
 }
-
 
 .instrumentos {
 	display: flex;
