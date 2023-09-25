@@ -1,5 +1,8 @@
 /* unidades relativas: em, rem, vh, vw, % */
 /* unidades absolutas: px, cm, mm, pt, in */
+main {
+	color: antiquewhite;
+}
 /*
 * HEADER
 */
@@ -91,33 +94,29 @@
 	transition: var(--transition__on);
 	border-radius: 1rem;
 }
-/* .btn--inverted {
-  background-color: var(--color__primary);
-  box-shadow: 0 0 3px var(--color__shadow--light);
-  color: var(--color__secondary);
-} */
 .btn:hover {
 	transform: scale(1.2);
 	transition: var(--transition__off);
 }
 .cards-gallery {
+	padding-top: 2em;
 	flex-wrap: wrap;
-	gap: 2em;
 }
 .cards-gallery > article {
 	position: relative;
+	max-width: 250px;
+	color: var(--txt-color--alt);
 }
 .cards-gallery > article button {
+	color: var(--txt-color);
 	position: absolute;
 	right: 10px;
 	bottom: 50px;
+	border: 1px solid currentColor;
 }
 .cards-gallery > article button .icon {
 	width: 4rem;
 	padding-top: 4rem;
-}
-.cards-gallery img {
-	min-width: 300px;
 }
 .card__title {
 	padding: 0 0.2em;

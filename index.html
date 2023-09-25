@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/app.css" />
   <link rel="stylesheet" href="styles/home.css" />
   <link rel="icon" href="fotos/logo.ico">
+  <script type="module" src="scripts/app.js" defer></script>
   <!-- <script src="scriptcod.js" defer></script> -->
   <title>TrinityMusic</title>
 </head>
@@ -113,7 +114,6 @@
         </div>
       </section>
       <section>
-        <h2 id="feat-title">Destacados</h2>
         <div id="destacados" class="gallery-wrapper">
           <!-- TODO: implementar 'Agregar al carro' -->
           <!-- TODO: implementar 'mostrar productos desde json' -->
@@ -126,7 +126,7 @@
                   <h3>JS32 Dinky arch</h3>
                   <span>$0</span>
                 </div>
-                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
+                <button class="cart-btn btn flex" type="button" data-product-id="1"><span class="icon"><svg>
                       <use href='#add-to-cart-icon' />
                     </svg></span></button>
               </article>
