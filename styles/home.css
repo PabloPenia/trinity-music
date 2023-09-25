@@ -143,6 +143,7 @@ main {
 }
 
 .contenedor-footer {
+	position: relative;
 	opacity: 0.96;
 	justify-content: space-between;
 	display: flex;
@@ -151,11 +152,13 @@ main {
 	align-items: center;
 }
 
+
+
 .contacto {
 	margin-left: 40px;
 }
 
-.contacto h2 {
+.contacto > h2 {
 	font-family: 'Grandeurs';
 	text-align: center;
 	color: var(--txt-color);
