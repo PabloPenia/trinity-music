@@ -44,14 +44,16 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 100%;
 	/* background-image: url('../fotos/pexels01.jpg'); */
 	/* background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed; */
 }
-.app-wrapper > main {
+main {
 	flex: 1;
+}
+main > section {
+	padding: 2em var(--sp__sides);
 }
 .app-wrapper > header {
 	/* margin: 5px 10px 20px 10px; top right bottom left sentido horario */
