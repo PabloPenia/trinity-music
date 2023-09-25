@@ -15,6 +15,19 @@
 <body>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="sprite">
     <defs>
+      <symbol id="add-to-cart-icon" viewBox="0 0 90 90">
+        <path class="cls-1"
+          d="m73.542 71.14a6.3 6.3 0 1 1-4.455 1.846 6.269 6.269 0 0 1 4.455-1.846zm-26.531-0.012a6.309 6.309 0 1 1-4.466 1.846 6.293 6.293 0 0 1 4.466-1.846zm20.554-47.782h-9v-8.991a1.8 1.8 0 1 0-3.6 0v8.991h-9a1.8 1.8 0 0 0 0 3.6h9v9a1.8 1.8 0 0 0 3.6 0v-9h9a1.8 1.8 0 0 0 0-3.6zm11.629 0h9.014v0.013a1.9 1.9 0 0 1 0.584 0.1 1.79 1.79 0 0 1 1.11 2.273l-9.472 27.276a7.993 7.993 0 0 1-7.646 5.45h-31.593a1.2 1.2 0 0 1-0.213 0.05 4.177 4.177 0 0 0-2.513 1.394 4.124 4.124 0 0 0 3.13 6.806h39.963a1.8 1.8 0 0 1 0 3.6h-39.963a7.711 7.711 0 0 1-5.96-12.62 7.8 7.8 0 0 1-1.227-0.716 8.057 8.057 0 0 1-2.941-3.964l-13.366-38.477a4.509 4.509 0 0 0-1.633-2.2 4.449 4.449 0 0 0-2.624-0.816h-12.043a1.8 1.8 0 0 1 0-3.6h12.047a8.037 8.037 0 0 1 7.647 5.45l3.478 10.021a1.59 1.59 0 0 1 0.347-0.038h9.013a22.5 22.5 0 0 0 38.342 17.717c4.116-4.119 7.554-11.779 6.519-17.719zm-35.793 15.17a18.9 18.9 0 1 1 13.366 5.538 18.842 18.842 0 0 1-13.366-5.538z"
+          fill-rule="evenodd" />
+      </symbol>
+      <symbol id="left-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+      </symbol>
+      <symbol id="right-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+      </symbol>
       <symbol id="search-icon" viewBox="0 0 16 16">
         <path
           d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -73,21 +86,95 @@
 
     </header>
     <main>
-      <!-- <section class="slideshow">
-        <img src="fotos/showcase/01.jpg" alt="">
-      </section> -->
-      <section class="contenedor-carrousel">
-        <div class="carrousel">
-          <img src="fotos/showcase/01.jpg" alt="">
-          <img src="fotos/showcase/02.jpg" alt="">
+      <section class="flex slideshow">
+        <div class="slideshow__btn">
+          <button class="icon">
+            <svg>
+              <use href='#left-icon' />
+            </svg>
+          </button>
+        </div>
+        <figure class="flex">
           <img src="fotos/showcase/03.jpg" alt="">
-          <img src="fotos/showcase/04.jpg" alt="">
-          <img src="fotos/showcase/05.jpg" alt="">
+          <figcaption>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reiciendis alias sapiente dolores velit
+              nihil quasi blanditiis nisi commodi pariatur hic et corrupti eos soluta praesentium repellat, laborum ipsa
+              necessitatibus!</p>
+            <button>Click this thing and buy stuff</button>
+          </figcaption>
+        </figure>
+        <div class="slideshow__btn">
+          <button class="icon">
+            <svg>
+              <use href='#right-icon' />
+            </svg>
+          </button>
         </div>
       </section>
-    </main>
-
-    <div class="instrumentos">
+      <section>
+        <h2 id="feat-title">Destacados</h2>
+        <div id="destacados" class="gallery-wrapper">
+          <!-- TODO: implementar 'Agregar al carro' -->
+          <!-- TODO: implementar 'mostrar productos desde json' -->
+          <section aria-labelledby="feat-title">
+            <h2 id="feat-title">Destacados</h2>
+            <div class="cards-gallery flex">
+              <article>
+                <img src="img/productos/guitarra-electrica-jackson-js32.png" alt="">
+                <div class="flex card__title">
+                  <h3>JS32 Dinky arch</h3>
+                  <span>$0</span>
+                </div>
+                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
+                      <use href='#add-to-cart-icon' />
+                    </svg></span></button>
+              </article>
+              <article>
+                <img src="img/productos/guitarra-jackson-js32q.png" alt="">
+                <div class="flex card__title">
+                  <h3>JS32 DKA arch</h3>
+                  <span>$0</span>
+                </div>
+                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
+                      <use href='#add-to-cart-icon' />
+                    </svg></span></button>
+              </article>
+              <article>
+                <img src="img/productos/guitarra-ibanez-jemjr.png" alt="">
+                <div class="flex card__title">
+                  <h3>JEMJR STEVE VAI WH</h3>
+                  <span>$0</span>
+                </div>
+                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
+                      <use href='#add-to-cart-icon' />
+                    </svg></span></button>
+              </article>
+              <article>
+                <img src="img/productos/guitarra-stagg.png" alt="">
+                <div class="flex card__title">
+                  <h3>SES60 natural</h3>
+                  <span>$0</span>
+                </div>
+                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
+                      <use href='#add-to-cart-icon' />
+                    </svg></span></button>
+              </article>
+              <article>
+                <img src="img/productos/guitarra-stagg-l.png" alt="">
+                <div class="flex card__title">
+                  <h3>L serie STD violin</h3>
+                  <span>$0</span>
+                </div>
+                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
+                      <use href='#add-to-cart-icon' />
+                    </svg></span></button>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="instrumentos">
         <div class="box">
           <h2>Guitarras</h2>
           <img src="fotos/Img1.jpg">
@@ -100,8 +187,8 @@
           <h2>Guitarras</h2>
           <img src="fotos/Img1.jpg">
         </div>
-    </div>
-
+      </section>
+    </main>
     <footer class="contenedor-footer">
       <div class="contacto">
         <h2>Contacto</h2>
