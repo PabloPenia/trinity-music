@@ -169,23 +169,16 @@ main {
 	line-height: 0;
 }
 
-.botones {
+.redes {
 	margin-right: 10%;
 	padding-top: 40px;
 }
 
-.botones li {
-	list-style: none;
-}
-
-.botones a {
-	font-size: 15px;
-	font-family: verdana;
-	text-decoration: none;
+.redes a {
 	color: var(--txt-color);
 }
 
-.botones a:hover {
+.redes a:hover {
 	color: var(--txt-color--alt);
 }
 
