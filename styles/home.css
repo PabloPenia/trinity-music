@@ -128,21 +128,18 @@ main {
 }
 
 .box {
+	position: relative;
 	color: var(--txt-color);
-	/*border: solid red;
-	border-radius: 20px 0 20px 0;*/
 	width: 32%;
-	/*padding: 0.2em 0.8em;*/
 	display: block;
-	/*box-shadow: inset 2px 10px 10px white;  x, y, blur, stroke, color, inset (word can be palced as 1st or last value)*/
 }
 
 .box > h2 {
 	position: absolute;
 	display: block;
-	/*left: 20%;
-	transform: translateX(-50%);*/
-	top: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 10%;
 }
 
 .contenedor-footer {
@@ -217,8 +214,4 @@ main {
 	justify-content: space-between;
 	background-color: #151539;
 	margin: 0.5em;
-}
-
-.box h2 {
-	color: #ce41f9;
 }
