@@ -48,9 +48,9 @@
 .box > h2 {
 	position: absolute;
 	display: block;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 5%;
+	/*left: 20%;
+	transform: translateX(-50%);*/
+	top: 40%;
 }
 
 .contenedor-footer {
