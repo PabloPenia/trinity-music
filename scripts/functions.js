@@ -10,3 +10,16 @@ export async function getProducts() {
 		console.log(e)
 	}
 }
+
+// DELETE ME
+
+export function showSection(caja) {
+	if (caja.style.display === 'none') {
+		// si el elemento esta oculto lo muestro
+		caja.style.display = 'block'
+	} else {
+		// si el elemento se muestra lo oculto
+		caja.style.display = 'none'
+	}
+}
+
