@@ -83,3 +83,11 @@ carrousel.addEventListener('mouseleave', () => {
 	slideTimer = setInterval(nextSlide, slideInterval)
 })
 //ayno!
+
+function showSection(){
+	
+    if(showElement.style.display === 'none'){
+        showElement.style.display= 'block';
+	} else
+        showElement.style.display='none';
+}
