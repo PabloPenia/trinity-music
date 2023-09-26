@@ -6,6 +6,10 @@ main {
 /*
 * HEADER
 */
+html {
+	scroll-behavior: smooth;
+  }
+
 .logo {
 	display: block; /* no cambiar */
 }
@@ -130,7 +134,7 @@ main {
 .box {
 	position: relative;
 	color: var(--txt-color);
-	width: 32%;
+	width: 100%;
 	display: block;
 }
 
@@ -146,15 +150,39 @@ main {
 	position: relative;
 	opacity: 0.96;
 	justify-content: space-between;
-	display: flex;
+	display: inline;
 	background-color: var(--bg-color);
 	width: 100%;
 	align-items: center;
 }
 
+.newsletter > div {
+	position: relative;
+	justify-content: center;
+	/*line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;*/
+}
 
+.newsletter > input{
+	width: 25%;
+    font-size: 13px;
+    line-height: 20px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #ededed;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+
+.icon{
+	display: inline-block;
+	justify-content: center;	
+}
 
 .contacto {
+	position: relative;
 	margin-left: 40px;
 }
 
@@ -183,6 +211,10 @@ main {
 
 .redes a:hover {
 	color: var(--txt-color--alt);
+}
+
+.redes > h2{
+	color: var(--txt-color);
 }
 
 .contenedor-carrousel {
