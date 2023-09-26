@@ -7,4 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	addToCartButtons.forEach((button) => {
 		button.addEventListener('click', addToCart)
 	})
+
+	// DELETE ME
 })
