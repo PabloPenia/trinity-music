@@ -1,3 +1,5 @@
+import {showSection} from './functions.js'
+
 document.addEventListener('DOMContentLoaded', () => {
 	const addToCartButtons = document.querySelectorAll('.cart-btn')
 	function addToCart(event) {
@@ -8,5 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		button.addEventListener('click', addToCart)
 	})
 
-	// DELETE ME
+	const showElement = document.getElementById('contenedor-footer') // selecciono elemento html
 })
+
