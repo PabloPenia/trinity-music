@@ -112,7 +112,7 @@ main > section {
 	top: 100%;
 	left: 0;
 	background: var(--bg-color);
-	z-index: 100%;
+	z-index: 100;
 }
 
 /*.menu > li:hover .submenu {

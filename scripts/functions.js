@@ -10,3 +10,5 @@ export async function getProducts() {
 		console.log(e)
 	}
 }
+
+// DELETE ME

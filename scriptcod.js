@@ -18,6 +18,23 @@ function showSection() {
 	}
 }
 
+// leeme: PUTO EL QUE LEE
+// en app.js
+const buttonFooter = document.getElementById('ID DEL BOTON') // primero guardo en variables cada boton
+const footer = document.getElementById('ID DE LA CAJA') // y cada caja que voy a modificar
+buttonFooter.addEventListener('click', () => mostrarSeccion(buttonFooter, footer)) // agrego el listener, y le paso como primer argumento el boton, segundo la caja
+
+// a functions.js
+function showSection(boton, caja) {
+	if (caja.style.display === 'none') {
+		caja.style.display = 'block'
+	} else {
+		caja.style.display = 'none'
+	}
+}
+
+
+
 // ITERAR UN ARRAY (pseudo database)
 
 // array de productos a iterar
@@ -46,7 +63,7 @@ function buscarPorNombre(terminoDeBusqueda) {
 	// el array resultante solo tendra los elementos que coincidan con la busqueda.
 	const productosFiltrados = productos.filter(
 		(item) => item.nombre === terminoDeBusqueda
-	)
+	)buttonfooter
 	return productosFiltrados
 }
 
