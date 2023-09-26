@@ -7,7 +7,7 @@
 //     doloribus quae a officiis, dolorem, at mollitia sunt tempora hic fugiat corporis numquam rerum labore.</section>
 //   <button id="boton" onclick="showSection()">Mostrar seccion</button>
 
-const showElement = document.getElementById('seccion') // selecciono elemento html
+const showElement = document.getElementById('contenedor-footer') // selecciono elemento html
 function showSection() {
 	if (showElement.style.display === 'none') {
 		// si el elemento esta oculto lo muestro
@@ -84,10 +84,3 @@ carrousel.addEventListener('mouseleave', () => {
 })
 //ayno!
 
-function showSection(){
-	
-    if(showElement.style.display === 'none'){
-        showElement.style.display= 'block';
-	} else
-        showElement.style.display='none';
-}
