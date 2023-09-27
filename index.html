@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/app.css" />
   <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/slideshow.css" />
   <link rel="icon" href="fotos/logo.ico">
   <script type="module" src="scripts/app.js" defer></script>
-  <script src="scriptcod.js" defer></script>
+  <script src="scripts/slideshow.js" defer></script>
   <title>TrinityMusic</title>
 </head>
 
@@ -86,33 +87,51 @@
       </div>
 
     </header>
+    <section class="slideshow-container">
+      <div class="slide fade">
+        <div class="overlay"></div>
+        <img src="fotos/showcase/01.jpg" alt="Image 1">
+      </div>
+      <div class="slide fade">
+        <div class="overlay"></div>
+        <img src="fotos/showcase/02.jpg" alt="Image 2">
+      </div>
+      <div class="slide fade">
+        <div class="overlay"></div>
+        <img src="fotos/showcase/03.jpg" alt="Image 3">
+      </div>
+      <div class="slide fade">
+        <div class="overlay"></div>
+        <img src="fotos/showcase/04.jpg" alt="Image 3">
+      </div>
+      <div class="slide fade">
+        <div class="overlay"></div>
+        <img src="fotos/showcase/05.jpg" alt="Image 3">
+      </div>
+      <div class="slide-content">
+        <h2>Tu Destino Musical</h2>
+        <p>Descubre una gama única de guitarras que inspirarán tu pasión por la música.</p>
+        <a class="flex" href="#">Explorar Ahora</a>
+      </div>
+      <button class="icon arrow left" onclick="plusSlides(-1)">
+        <svg>
+          <use href='#left-icon' />
+        </svg>
+      </button>
+      <button class="icon arrow right" onclick="plusSlides(1)">
+        <svg>
+          <use href='#right-icon' />
+        </svg>
+      </button>
+      <div class="pagination">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </section>
     <main>
-      <section class="flex slideshow">
-        <div class="slideshow__btn">
-          <button class="icon">
-            <svg>
-              <use href='#left-icon' />
-            </svg>
-          </button>
-        </div>
-        <figure class="flex">
-          <img src="fotos/showcase/03.jpg" alt="">
-          <figcaption>
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora reiciendis alias sapiente dolores velit
-              nihil quasi blanditiis nisi commodi pariatur hic et corrupti eos soluta praesentium repellat, laborum ipsa
-              necessitatibus!</p>
-            <button>Click this thing and buy stuff</button>
-          </figcaption>
-        </figure>
-        <div class="slideshow__btn">
-          <button class="icon">
-            <svg>
-              <use href='#right-icon' />
-            </svg>
-          </button>
-        </div>
-      </section>
       <section>
         <div id="destacados" class="gallery-wrapper">
           <!-- TODO: implementar 'Agregar al carro' -->
