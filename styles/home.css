@@ -97,33 +97,38 @@ html {
 	transform: translateX(-50%);
 	bottom: 20%;
 }
+/*rehice footer*/
 
 .contenedor-footer {
-	display: none;
+	/*display: none ;*/
 	flex-direction: column;
-	align-items: center;
 	width: 100%;
-	opacity: 0.96;
 	background-color: var(--bg-color);
+	padding-top: 2em;
 }
 
-.contenedor-newsred {
+.contenedor-cajas{
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; 
 	align-items: center;
 	width: 100%;
+	margin: auto;
 }
 
-.newsletter > h2 {
-	padding-top: 10%;
+.newsletter > h2{
 	color: var(--txt-color);
-	flex-direction: row;
-	justify-content: center;
+	text-align: center;
 }
 
-.newsletter > input {
+.contenedor-submit{
+	display: flex;
+	max-width: 500px;
+}
+
+.contenedor-submit input{
+	display: block;
 	flex-direction: row;
-	justify-content: center;
+	width: 350px;
 	font-size: 13px;
 	line-height: 20px;
 	height: 40px;
@@ -133,9 +138,7 @@ html {
 	background: #ffffff;
 }
 
-.newsletter > button {
-	flex-direction: row;
-	justify-content: center;
+.contenedor-submit button{
 	bottom: 0;
 	right: 0;
 	background: #5e3fe9;
@@ -148,9 +151,13 @@ html {
 	border-radius: 0 19px 19px 0;
 }
 
-.redes > a {
+.redes{
 	flex-direction: row;
 	justify-content: center;
+	padding-top: 2em;
+}
+
+.redes > a {
 	color: var(--txt-color);
 }
 
@@ -158,14 +165,16 @@ html {
 	color: var(--txt-color--alt);
 }
 
-.contacto {
+.contenedor-contactomapa {
+	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	padding-top: 8em;
+	padding-bottom: 3em;
+	gap: 0.1em;
 }
 
 .contacto > h2 {
-	flex-direction: row;
-	justify-content: center;
+	text-align: center;
 	font-family: 'Grandeurs';
 	color: var(--txt-color);
 }
@@ -179,6 +188,8 @@ html {
 	list-style: none;
 	line-height: 0;
 }
+
+
 
 .contenedor-carrousel {
 	width: 100%;
