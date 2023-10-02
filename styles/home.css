@@ -99,8 +99,11 @@ html {
 }
 /*rehice footer*/
 
+#footer{
+	display: none;
+}
+
 .contenedor-footer {
-	/*display: none; */
 	flex-direction: column;
 	width: 100%;
 	background-color: var(--bg-color);

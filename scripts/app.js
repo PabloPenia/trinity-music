@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		button.addEventListener('click', addToCart)
 	})
 
-	const showElement = document.getElementById('footer') // selecciono elemento html
+	const mostrarFooterBtn = document.getElementById
+	('mostrar-footer-btn')
+	const footer = document.getElementById('footer')
+	
+	mostrarFooterBtn.addEventListener('click', () => {
+		showSection(footer)
+	})
 })
 
