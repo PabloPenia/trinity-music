@@ -1,4 +1,4 @@
-import {showSection} from './functions.js'
+import { showSection } from './functions.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	const addToCartButtons = document.querySelectorAll('.cart-btn')
@@ -9,13 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	addToCartButtons.forEach((button) => {
 		button.addEventListener('click', addToCart)
 	})
-
-	const mostrarFooterBtn = document.getElementById
-	('mostrar-footer-btn')
+	// RESERVAR ESPACIO
+	//
+	const mostrarFooterBtn = document.getElementById('mostrar-footer-btn')
 	const footer = document.getElementById('footer')
-	
+
 	mostrarFooterBtn.addEventListener('click', () => {
 		showSection(footer)
 	})
 })
-
