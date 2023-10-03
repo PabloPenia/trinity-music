@@ -48,7 +48,6 @@ export async function displayProducts() {
 	}
 }
 
-// DELETE ME
 
 export function showSection(caja) {
 	if (caja.style.display === 'none') {
@@ -58,7 +57,7 @@ export function showSection(caja) {
 		// si el elemento se muestra lo oculto
 		caja.style.display = 'none'
 	}
-
-
+	
 	
 }
+

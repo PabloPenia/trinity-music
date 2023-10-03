@@ -19,4 +19,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 	mostrarFooterBtn.addEventListener('click', () => {
 		showSection(footer)
 	})
+
+	//
+	const cerrarVentanaBtn = document.getElementById('cerrarmiModal');
+	const miModal = document.getElementById('miModal');
+
+	cerrarVentanaBtn.addEventListener('click', function() {
+	return	miModal.style.display = 'none';
+	})
+
 })
