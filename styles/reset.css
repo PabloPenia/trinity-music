@@ -6,6 +6,7 @@
 	src: url('fonts/grandeurs.otf') format('opentype');
 }
 
+
 :root {
 	/* transitions */
 	--trans__on: 0.4s ease-out;
