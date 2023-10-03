@@ -15,6 +15,16 @@
 </head>
 
 <body>
+  <div id="miModal" class="miModal-ventana">
+    <div class="miModal-contenido">
+      <h2>Suscríbete para tener las ultimas novedades</h2>
+          <p>¡Se el primero en enterarse de lo que llega a la tienda!</p>
+              <input type="email-sus" placeholder="Ingresa tu e-mail">
+              <button type="submit" class="btnSuscribirme"><span>Suscribirme</span></button>
+              <button id="cerrarmiModal">Cerrar</button>
+    </div>
+  </div>
+
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="sprite">
     <defs>
       <symbol id="add-to-cart-icon" viewBox="0 0 90 90">
@@ -138,60 +148,9 @@
       <section>
         <div id="destacados" class="gallery-wrapper">
           <!-- TODO: implementar 'Agregar al carro' -->
-          <!-- TODO: implementar 'mostrar productos desde json' -->
           <section aria-labelledby="feat-title">
-            <h2 id="feat-title">Destacados</h2>
-            <div class="cards-gallery flex">
-              <article>
-                <img src="img/productos/guitarra-electrica-jackson-js32.png" alt="">
-                <div class="flex card__title">
-                  <h3>JS32 Dinky arch</h3>
-                  <span>$0</span>
-                </div>
-                <button class="cart-btn btn flex" type="button" data-product-id="1"><span class="icon"><svg>
-                      <use href='#add-to-cart-icon' />
-                    </svg></span></button>
-              </article>
-              <article>
-                <img src="img/productos/guitarra-jackson-js32q.png" alt="">
-                <div class="flex card__title">
-                  <h3>JS32 DKA arch</h3>
-                  <span>$0</span>
-                </div>
-                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
-                      <use href='#add-to-cart-icon' />
-                    </svg></span></button>
-              </article>
-              <article>
-                <img src="img/productos/guitarra-ibanez-jemjr.png" alt="">
-                <div class="flex card__title">
-                  <h3>JEMJR STEVE VAI WH</h3>
-                  <span>$0</span>
-                </div>
-                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
-                      <use href='#add-to-cart-icon' />
-                    </svg></span></button>
-              </article>
-              <article>
-                <img src="img/productos/guitarra-stagg.png" alt="">
-                <div class="flex card__title">
-                  <h3>SES60 natural</h3>
-                  <span>$0</span>
-                </div>
-                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
-                      <use href='#add-to-cart-icon' />
-                    </svg></span></button>
-              </article>
-              <article>
-                <img src="img/productos/guitarra-stagg-l.png" alt="">
-                <div class="flex card__title">
-                  <h3>L serie STD violin</h3>
-                  <span>$0</span>
-                </div>
-                <button class="btn flex" type="button" onclick="alert('Sin implementar')"><span class="icon"><svg>
-                      <use href='#add-to-cart-icon' />
-                    </svg></span></button>
-              </article>
+            <h2 id="feat-title">Artículos Destacados</h2>
+            <div id="galeria" class="cards-gallery flex">
             </div>
           </section>
         </div>
@@ -214,15 +173,10 @@
       </section>
       <!-- RESERVAR ESTE LUGAR BAJO INSTRUMENTOS -->
     </main>
+    
     <footer id="footer" class="contenedor-footer">
       <div class="contenedor-cajas">
-        <div class="newsletter">
-          <h2>Newsletter</h2>
-          <div class="contenedor-submit">
-            <input type="searchfooter" placeholder="Ingresa tu e-mail">
-            <button type="submit" class="btn btnSuscribirme"><span>Suscribirme</span></button>
-          </div>
-        </div>
+        <h2>Nuestras redes</h2>
         <div class="redes">
           <a href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
@@ -268,12 +222,12 @@
           <p>Trinity Music es la principal tienda de instrumentos musicales, ofreciendo una amplia <br>selección de
             guitarras, teclados, baterías y accesorios de alta calidad desde 2005. <br>Nuestro equipo apasionado y
             servicios de reparación hacen de nosotros <br>la elección preferida de músicos de todos los niveles.
-            <br>Encuentra tu sonido en Trinity Music</p>
+            <br>Encuentra tu sonido en Trinity Music
+          </p>
         </div>
       </div>
     </footer>
     <button id="mostrar-footer-btn" type="button">Mostrar Footer</button>
   </div>
 </body>
-
 </html>

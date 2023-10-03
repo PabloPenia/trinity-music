@@ -45,6 +45,9 @@ html {
 	transform: scale(1.2);
 	transition: var(--transition__off);
 }
+#feat-title {
+	font-size: 2em;
+}
 .cards-gallery {
 	padding-top: 2em;
 	flex-wrap: wrap;
@@ -58,16 +61,22 @@ html {
 	color: var(--txt-color);
 	position: absolute;
 	right: 10px;
-	bottom: 50px;
+	bottom: 30%;
 	border: 1px solid currentColor;
 }
 .cards-gallery > article button .icon {
 	width: 4rem;
 	padding-top: 4rem;
+	color: var(--bg-color);
 }
 .card__title {
+	display: block;
 	padding: 0 0.2em;
+	width: 100%;
 	justify-content: space-between;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .card__title span {
 	font-size: 1.2em;
@@ -99,7 +108,7 @@ html {
 	transform: translateX(-50%);
 	bottom: 20%;
 }
-/*rehice footer*/
+/*footer*/
 
 #footer {
 	display: none;
@@ -120,41 +129,11 @@ html {
 	margin: auto;
 }
 
-.newsletter > h2 {
+.contenedor-cajas > h2 {
 	color: var(--txt-color);
 	text-align: center;
 }
 
-.contenedor-submit {
-	display: flex;
-	max-width: 500px;
-}
-
-.contenedor-submit input {
-	display: block;
-	flex-direction: row;
-	width: 350px;
-	font-size: 13px;
-	line-height: 20px;
-	height: 40px;
-	border-radius: 3px;
-	border: 1px solid #ededed;
-	box-sizing: border-box;
-	background: #ffffff;
-}
-
-.contenedor-submit button {
-	bottom: 0;
-	right: 0;
-	background: #5e3fe9;
-	color: #ffffff;
-	height: 40px;
-	font-weight: 500;
-	line-height: 40px;
-	font-size: 14px;
-	padding: 0 25px;
-	border-radius: 0 19px 19px 0;
-}
 
 .redes {
 	flex-direction: row;
@@ -205,6 +184,57 @@ html {
 	color: var(--txt-color);
 	text-align: center;
 }
+
+.miModal-ventana{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999999;
+	background-color: rgba(0, 0, 0, 0.394);
+}
+
+.miModal-contenido{
+	margin: auto;
+	background-color:hsl(241, 68%, 68%);
+	padding: 20px;
+    border-radius: 5px;
+	width: 90%;
+	max-width: 900px;
+	max-height: 90%;
+	display: grid;
+	gap: 1em;
+	place-items: center;
+}
+
+.miModal-contenido > h2{
+	font-size: 3rem;
+}
+
+.miModal-contenido >p{
+
+}
+
+.btnSuscribirme{
+	background-color: hsl(267, 60%, 21%);
+	color: rgb(255, 255, 255);
+	padding: 1rem 3rem;
+	border-radius: 3px;
+}
+
+#cerrar-ventana{
+    cursor: pointer;
+}
+
+#mostrar-footer-btn{
+	background-color: hsl(267, 60%, 21%);
+	padding: 1rem 3rem;
+	color: rgb(255, 255, 255);
+}
+
 
 .contenedor-carrousel {
 	width: 100%;
