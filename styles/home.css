@@ -215,7 +215,8 @@ html {
 	font-size: 3rem;
 }
 
-.miModal-contenido > p {
+.miModal-contenido >p{
+	font-size: 2rem;
 }
 
 .btnSuscribirme {
