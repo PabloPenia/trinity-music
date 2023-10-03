@@ -45,6 +45,9 @@ html {
 	transform: scale(1.2);
 	transition: var(--transition__off);
 }
+#feat-title {
+	font-size: 2em;
+}
 .cards-gallery {
 	padding-top: 2em;
 	flex-wrap: wrap;
@@ -58,16 +61,22 @@ html {
 	color: var(--txt-color);
 	position: absolute;
 	right: 10px;
-	bottom: 50px;
+	bottom: 30%;
 	border: 1px solid currentColor;
 }
 .cards-gallery > article button .icon {
 	width: 4rem;
 	padding-top: 4rem;
+	color: var(--bg-color);
 }
 .card__title {
+	display: block;
 	padding: 0 0.2em;
+	width: 100%;
 	justify-content: space-between;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .card__title span {
 	font-size: 1.2em;

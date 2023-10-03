@@ -13,7 +13,7 @@
 		"brand": "Jackson",
 		"category": "Guitarras",
 		"price": 715,
-		"featured": true
+		"featured": false
 	},
 	{
 		"model": "JEMJR STEVE VAI WH",
@@ -21,7 +21,7 @@
 		"brand": "Ibanez",
 		"category": "Guitarras",
 		"price": 749,
-		"featured": true
+		"featured": false
 	},
 	{
 		"model": "SES60 natural",
@@ -37,6 +37,86 @@
 		"brand": "Stagg",
 		"category": "Guitarras",
 		"price": 420,
+		"featured": false
+	},
+	{
+		"model": "Js32q Dka Arch Top Tgb",
+		"image": "img/productos/guitarra-jackson-js32q.png",
+		"brand": "Jackson",
+		"category": "Guitarras",
+		"price": 729,
+		"featured": true
+	},
+	{
+		"model": "JS32 Dinky arch top DKAM Gloss Black",
+		"image": "img/productos/guitarra-electrica-jackson-js32.png",
+		"brand": "Jackson",
+		"category": "Guitarras",
+		"price": 715,
+		"featured": false
+	},
+	{
+		"model": "JEMJR STEVE VAI WH",
+		"image": "img/productos/guitarra-ibanez-jemjr.png",
+		"brand": "Ibanez",
+		"category": "Guitarras",
+		"price": 749,
+		"featured": false
+	},
+	{
+		"model": "SES60 natural",
+		"image": "img/productos/guitarra-stagg.png",
+		"brand": "Stagg",
+		"category": "Guitarras",
+		"price": 320,
+		"featured": false
+	},
+	{
+		"model": "L serie STD violin burst zurdo",
+		"image": "img/productos/guitarra-stagg-l.png",
+		"brand": "Stagg",
+		"category": "Guitarras",
+		"price": 420,
+		"featured": false
+	},
+	{
+		"model": "Js32q Dka Arch Top Tgb",
+		"image": "img/productos/guitarra-jackson-js32q.png",
+		"brand": "Jackson",
+		"category": "Guitarras",
+		"price": 729,
+		"featured": true
+	},
+	{
+		"model": "JS32 Dinky arch top DKAM Gloss Black",
+		"image": "img/productos/guitarra-electrica-jackson-js32.png",
+		"brand": "Jackson",
+		"category": "Guitarras",
+		"price": 715,
+		"featured": false
+	},
+	{
+		"model": "Js32q Dka Arch Top Tgb",
+		"image": "img/productos/guitarra-jackson-js32q.png",
+		"brand": "Jackson",
+		"category": "Guitarras",
+		"price": 729,
+		"featured": true
+	},
+	{
+		"model": "JS32 Dinky arch top DKAM Gloss Black",
+		"image": "img/productos/guitarra-electrica-jackson-js32.png",
+		"brand": "Jackson",
+		"category": "Guitarras",
+		"price": 715,
+		"featured": false
+	},
+	{
+		"model": "JS32 Dinky arch top DKAM Gloss Black",
+		"image": "img/productos/guitarra-electrica-jackson-js32.png",
+		"brand": "Jackson",
+		"category": "Guitarras",
+		"price": 715,
 		"featured": false
 	}
 ]
