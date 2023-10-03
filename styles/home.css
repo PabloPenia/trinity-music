@@ -218,7 +218,7 @@ html {
 
 .miModal-contenido >p{
 	font-size: 2rem;
-	font-family: 'Roboto', light;
+	font-family: 'Roboto', sans-serif;
 }
 
 .btnSuscribirme {
@@ -226,12 +226,12 @@ html {
 	color: rgb(255, 255, 255);
 	padding: 1rem 3rem;
 	border-radius: 3px;
-	font-family: 'Roboto', light;
+	font-family: 'Roboto', sans-serif;
 }
 
 .miModal-contenido > input{
 	width: 50%;
-	font-family: 'Roboto', light;
+	font-family: 'Roboto', sans-serif;
 }
 
 #mostrar-footer-btn {
