@@ -229,7 +229,7 @@ html {
 
 .miModal-contenido{
 	margin: auto;
-	background-color:hsl(293, 58%, 61%);
+	background-color:hsl(241, 68%, 68%);
 	padding: 20px;
     border-radius: 5px;
 	width: 90%;
@@ -240,9 +240,25 @@ html {
 	place-items: center;
 }
 
+.miModal-contenido > h2{
+	font-size: 3rem;
+}
+
+.miModal-contenido >p{
+
+}
+
+.btnSuscribirme{
+	background-color: hsl(267, 60%, 21%);
+	color: rgb(255, 255, 255);
+	padding: 1rem 3rem;
+	border-radius: 3px;
+}
+
 #cerrar-ventana{
     cursor: pointer;
 }
+
 
 .contenedor-carrousel {
 	width: 100%;

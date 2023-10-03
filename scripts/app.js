@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 	})
 
 	//
-
-	
 	const cerrarVentanaBtn = document.getElementById('cerrarmiModal');
 	const miModal = document.getElementById('miModal');
 
