@@ -116,27 +116,35 @@ html {
 	flex-direction: column;
 	width: 100%;
 	background-color: var(--bg-color);
-	padding-top: 2em;
 }
 
-.contenedor-cajas {
+.contenedor-contacto{
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	margin: auto;
+	flex-direction: row;
+	gap:calc(10%);
+	padding: 2em;
 }
 
-.contenedor-cajas > h2 {
+.contacto > h2 {
 	color: var(--txt-color);
-	text-align: center;
+	padding-left: 2em;
 }
 
-.redes {
-	display: flex;
+.contacto ul li {
 	justify-content: center;
-	padding-top: 2em;
-	gap: 1em;
+	color: var(--txt-color);
+	margin: 30px;
+	font-family: 'Roboto';
+	list-style: none;
+	line-height: 0;
+}
+
+.mapa{
+	padding-top: 3em;
+}
+
+.redes{
+	padding-top: 3em;
 }
 
 .redes > a {
@@ -148,41 +156,18 @@ html {
 	transform: scale(1.4);
 }
 
-.contenedor-contactomapa {
-	display: flex;
-	flex-direction: row;
-	padding-top: 8em;
-	padding-bottom: 3em;
-	justify-content: center;
-	gap: 2em;
-}
 
-.contacto > h2 {
+.botones-footer{
+	display: fixed;
+	background-color: hsl(258, 47%, 49%);
+	padding: 0.1em;
+	color:aliceblue;
+	font-family: 'Roboto';
 	text-align: center;
-	font-family: 'Grandeurs';
-	color: var(--txt-color);
 }
 
-.contacto ul li {
-	flex-direction: row;
-	justify-content: center;
-	color: var(--txt-color);
-	margin: 30px;
-	font-family: verdana;
-	list-style: none;
-	line-height: 0;
-}
 
-.nosotros h2 {
-	text-align: center;
-	font-family: 'Grandeurs';
-	color: var(--txt-color);
-}
-
-.nosotros {
-	font-family: verdana;
-	color: var(--txt-color);
-}
+/*fin footer*/
 
 .miModal-ventana {
 	position: fixed;
@@ -213,12 +198,10 @@ html {
 
 .miModal-contenido > h2 {
 	font-size: 3rem;
-	font-family: 'Roboto', sans-serif;
 }
 
 .miModal-contenido >p{
 	font-size: 2rem;
-	font-family: 'Roboto', sans-serif;
 }
 
 .btnSuscribirme {
@@ -226,24 +209,13 @@ html {
 	color: rgb(255, 255, 255);
 	padding: 1rem 3rem;
 	border-radius: 3px;
-	font-family: 'Roboto', sans-serif;
 }
 
 .miModal-contenido > input{
 	width: 50%;
-	font-family: 'Roboto', sans-serif;
+	text-align: center;
 }
 
-#mostrar-footer-btn {
-	background-color: hsl(267, 60%, 21%);
-	padding: 1rem 3rem;
-	color: rgb(255, 255, 255);
-	font-family: 'Roboto', light;
-}
-
-#cerrar-miModal {
-	cursor: pointer;
-}
 
 .contenedor-carrousel {
 	width: 100%;
