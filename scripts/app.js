@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 		const value = footer.style.display
 		if (value === 'none') {
 			return (footer.style.display = 'flex')
+			
 		} else {
 			return (footer.style.display = 'none')
 		}
+
 	})
 
 	//
