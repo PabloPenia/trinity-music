@@ -118,10 +118,10 @@ html {
 	background-color: var(--bg-color);
 }
 
-.contenedor-contacto{
+.contenedor-contacto {
 	display: flex;
 	flex-direction: row;
-	gap:calc(10%);
+	gap: calc(10%);
 	padding: 2em;
 }
 
@@ -139,11 +139,11 @@ html {
 	line-height: 0;
 }
 
-.mapa{
+.mapa {
 	padding-top: 3em;
 }
 
-.redes{
+.redes {
 	padding-top: 3em;
 }
 
@@ -156,16 +156,14 @@ html {
 	transform: scale(1.4);
 }
 
-
-.botones-footer{
+.botones-footer {
 	display: fixed;
 	background-color: hsl(258, 47%, 49%);
 	padding: 0.1em;
-	color:aliceblue;
+	color: aliceblue;
 	font-family: 'Roboto';
 	text-align: center;
 }
-
 
 /*fin footer*/
 
@@ -200,7 +198,7 @@ html {
 	font-size: 3rem;
 }
 
-.miModal-contenido >p{
+.miModal-contenido > p {
 	font-size: 2rem;
 }
 
@@ -211,11 +209,10 @@ html {
 	border-radius: 3px;
 }
 
-.miModal-contenido > input{
+.miModal-contenido > input {
 	width: 50%;
 	text-align: center;
 }
-
 
 .contenedor-carrousel {
 	width: 100%;

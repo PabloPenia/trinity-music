@@ -156,7 +156,6 @@ main > section {
 	width: 200%;
 	background: var(--bg-color);
 }
-/* RESERVAR LO SIGUIENTE */
 .cart > button:hover + ul {
 	display: block;
 }
