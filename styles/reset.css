@@ -6,28 +6,29 @@
 	src: url('fonts/grandeurs.otf') format('opentype');
 }*/
 
-
 :root {
-	/* transitions */
-	--trans__on: 0.4s ease-out;
-	--trans__off: 0.4s ease-in;
+  /* transitions */
+  --trans__on: 0.4s ease-out;
+  --trans__off: 0.4s ease-in;
 
-	/* sizing / spacing */
-	--sp__sides: 4%;
-	--sp__around: 2rem;
-	--fsz__base: 16px;
-	/* --lh__base: #{fonts.$lh__base};
+  /* sizing / spacing */
+  --sp__sides: 4%;
+  --sp__around: 2rem;
+  --fsz__base: 16px;
+  --font__base: 'Roboto', sans-serif;
+  --border-radius: 0.4em;
+  /* --lh__base: #{fonts.$lh__base};
 	--fsz__small: #{fonts.$fsz__small};
 	// fonts
-	--font__base: #{fonts.$font__base};
 	--font__headings: #{fonts.$font__headings};
 	--font__brand: #{fonts.$font__brand}; */
-	/* Schemes */
-	/* Default theme */
-	--bg-color: hsla(240, 46%, 15%, 1);
-	--txt-color: hsla(240, 46%, 75%, 1);
-	--txt-color--alt: hsla(240, 46%, 75%, 1);
-	/* [data-theme='dark'] {
+  /* Schemes */
+  /* Default theme */
+  --bg-color: hsla(240, 46%, 15%, 1);
+  --txt-color: hsla(240, 46%, 75%, 1);
+  --txt-color--alpha: 240, 46%, 75%;
+  --txt-color--alt: hsla(240, 46%, 75%, 1);
+  /* [data-theme='dark'] {
 		color-scheme: dark;
 		--bg-color: #222;
 		--txt-color: #eee;
@@ -35,19 +36,19 @@
 	} */
 }
 html {
-	box-sizing: border-box;
-	font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 html,
 body {
-	width: 100vw;
-	height: 100%;
-	min-height: 100vh;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
 }
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 body,
 blockquote,
@@ -63,13 +64,14 @@ ol,
 ul,
 p,
 pre {
-	margin: 0;
+  margin: 0;
 }
 body {
-	/* font-family: var(--font__base); */
-	font-size: var(--fsz__base);
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+  /* font-family: var(--font__base); */
+  font-size: var(--fsz__base);
+  font-family: var(--font__base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -79,41 +81,41 @@ h4,
 h5,
 h6,
 p {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 img,
 video,
 canvas,
 svg {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 ul {
-	padding-left: 0;
-	list-style: none;
+  padding-left: 0;
+  list-style: none;
 }
 
 button {
-	border: 0;
-	outline: 0;
-	background: unset;
-	color: currentColor;
-	cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: unset;
+  color: currentColor;
+  cursor: pointer;
 }
 
 button,
 input,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 svg {
-	fill: currentColor;
+  fill: currentColor;
 }
