@@ -1,34 +1,28 @@
-async function getProducts() {
-	try {
-		const response = await fetch('./data/db.json')
-		if (!response.ok) {
-			throw new Error('No se encuetra el archivo json')
-		}
-		const products = await response.json()
-		console.log(products)
-		return products
-	} catch (e) {
-		console.log(e)
-	}
+export const getFeaturedProducts = (arr) =>
+  arr.filter((product) => product.featured === true)
+const cart = JSON.parse(localStorage.getItem('cart')) || []
+const setCart = (newItemId) =>
+  localStorage.setItem('cart', JSON.stringify([...cart, newItemId]))
+
+export async function getProducts() {
+  try {
+    const response = await fetch('./data/db.json')
+    if (!response.ok) {
+      throw new Error('No se encuetra el archivo json')
+    }
+    const products = await response.json()
+    return products
+  } catch (e) {
+    console.log(e)
+    return []
+  }
 }
 
-async function getFeaturedProducts() {
-	try {
-		const products = await getProducts()
-		console.log(products.filter((product) => product.featured))
-		return products.filter((product) => product.featured)
-	} catch (e) {
-		console.log(e)
-	}
-}
-
-export async function displayProducts() {
-	try {
-		const galeria = document.getElementById('galeria')
-		const products = await getProducts()
-		if (products.length > 0) {
-			products.forEach((product) => {
-				galeria.innerHTML += `
+export function displayProducts(products) {
+  const galeria = document.getElementById('galeria')
+  if (products.length > 0) {
+    products.forEach((product) => {
+      galeria.innerHTML += `
 			<article>
 				<img src="${product.image}" alt="">
 				<div class="flex card__title">
@@ -41,44 +35,46 @@ export async function displayProducts() {
 				</button>
 			</article>
 			`
-			})
-		}
-	} catch (e) {
-		console.log(e)
-	}
+    })
+  } else {
+    galeria.innerHTML += '<p>No hay productos que mostrar</p>'
+  }
 }
+// Cart functions
 
 export function addToCart(e) {
-	const productId = e.currentTarget.getAttribute('data-product-id')
-	const cart = JSON.parse(localStorage.getItem('cart')) || []
-	localStorage.setItem('cart', JSON.stringify([...cart, productId]))
-	updateCart()
+  setCart(e.currentTarget.getAttribute('data-product-id'))
+  return updateCart()
 }
 
-// export function showCart() {
-// 	const modal = document.querySelector('#miModal > miModal-contenido')
-// 	const cart = JSON.parse(localStorage.getItem('cart')) || []
-// 	const products = await getProducts()
-// 	const prodInCart = cart.map(prodId => products.filter(product => product.id === prodId))
+export function showCart() {
+  const modal = document.getElementById('cart-modal-container')
+  const content = document.getElementById('cart-modal')
 
-// 	modal?.innerHTML = prodInCart?.length && prodInCart.length > 0 ? (`
-// 		<div class="miModal-contenido">
-//       <h2>Suscríbete para tener las ultimas novedades</h2>
-//       <p>¡Se el primero en enterarte de lo que llega a la tienda!</p>
-//       <input type="email-sus" placeholder="Ingresa tu e-mail">
-//       <button type="submit" class="btnSuscribirme"><span>Suscribirme</span></button>
-//       <button id="cerrarmiModal">Cerrar</button>
-//     </div>`) : `No hay elementos que mostrar`
-// }
+  return (modal.style.display =
+    modal.style.display !== 'flex' ? 'flex' : 'none')
 
-export function getCart() {
-	return JSON.parse(localStorage.getItem('cart')) || []
+  // const prodInCart = cart.map((prodId) =>
+  //   productsDb.filter((product) => product.id === prodId)
+  // )
+  // let output = '<h2>Tus Productos</h2>'
+  // if (prodInCart.length && prodInCart.length > 0) {
+  //   output += `
+  // 		<ul>
+  // 		${prodInCart.map((product) => `<li>${product.model}</li>`)}
+  // 		</ul>
+  // 		<button id="cerrarmiModal">Cerrar</button>	`
+  // } else {
+  //   output +=
+  //     '<p>No hay elementos que mostrar.</p><p>Añade productos al carro.</p>'
+  // }
+  // modal.innerHTML = output
+  // modal.style.display = 'block'
 }
 
 export function updateCart() {
-	const cart = getCart()
-	const cartBtn = document.querySelector('.cart span')
-	if (cart?.length && cart.length > 0) {
-		cartBtn.textContent = cart.length
-	}
+  const cartBtn = document.querySelector('#show-cart-btn > .count')
+  if (cart.length && cart.length > 0) {
+    cartBtn.textContent = cart.length
+  }
 }
