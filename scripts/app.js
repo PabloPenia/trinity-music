@@ -1,13 +1,27 @@
-import { displayProducts, addToCart, updateCart } from './functions.js'
+import {
+  getFeaturedProducts,
+  getProducts,
+  displayProducts,
+  addToCart,
+  updateCart,
+} from './functions.js'
 
 document.addEventListener('DOMContentLoaded', async () => {
-  updateCart()
-  // RESERVAR ESPACIO
-  await displayProducts()
+  updateCart() // si habian productos en el carro en una sesion anterior los carga
+  const productsDb = await getProducts()
+  const featured = getFeaturedProducts(productsDb)
+  displayProducts(featured) // muestra los productos en la galeria
+  //* BOTONES
   const addToCartButtons = document.querySelectorAll('.cart-btn')
+  const showCartBtn = document.getElementById('show-cart-btn')
+
+  //* LISTENERS
   addToCartButtons.forEach((button) => {
     button.addEventListener('click', addToCart)
   })
+  showCartBtn.addEventListener('click', () =>
+    showCartBtn.classList.toggle('active')
+  )
 
   //
   const mostrarFooterBtn = document.getElementById('mostrar-footer-btn')

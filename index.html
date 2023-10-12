@@ -54,22 +54,24 @@
     </defs>
   </svg>
   <div class="app-wrapper">
-    <header>
-      <h1 class="logo hover">
+    <header id="master-header">
+      <h1 class="hover hover__light">
         <a href="/">TrinityMusic</a>
       </h1>
       <div class="search">
-        <input type="search" placeholder="Qué estás buscando?">
-        <button id="search-btn" class="icon">
-          <svg>
-            <use href='#search-icon' />
-          </svg>
-        </button>
+        <label>
+          <span class="icon">
+            <svg>
+              <use href='#search-icon' />
+            </svg>
+          </span>
+        </label>
+        <input type="search" class="hover hover__light" placeholder="Qué estás buscando?">
       </div>
       <div class="navigation">
         <nav>
           <ul class="menu">
-            <li class="hover"><a href="#instrumentos">Instrumentos</a>
+            <li><a class="hover hover__light" href="#instrumentos">Instrumentos</a>
               <!-- <ul class="submenu">
               <li><a href="#">Guitarra</a></li>
               <li><a href="#">Bajo</a></li>
@@ -78,18 +80,28 @@
             </li>
           </ul>
         </nav>
-        <div class="cart">
-          <button class="icon hover">
-            <svg>
-              <use href='#cart-icon' />
-            </svg>
-            <span>0</span>
+        <div class="cart-nav">
+          <button id="show-cart-btn" class="hover hover__light">
+            <span class="icon">
+              <svg>
+                <use href='#cart-icon' />
+              </svg>
+            </span>
+            <span class="count">0</span>
           </button>
-          <!-- <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ul> -->
+          <div id="cart-modal-container">    
+            <div id="cart-modal">
+              <h2>Tus productos</h2>
+              <ul>
+                <li>Producto 1</li>
+                <li>Producto 2</li>
+                <li>Producto 3</li>
+                <li>Producto 4</li>
+                <li>Producto 5</li>
+                <li>Producto 6</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -118,15 +130,16 @@
       <div class="slide-content">
         <h2>Tu Destino Musical</h2>
         <p>Descubre una gama única de instrumentos musicales que inspirarán tu pasión por la música.</p>
-        <a class="flex hover" href="#destacados">Explorar Instrumentos</a>
+        <a class="flex hover hover__scale" href="#destacados">Explorar Instrumentos</a>
       </div>
       <button class="icon arrow left" onclick="plusSlides(-1)">
-        <svg class="hover">
+        <svg class="hover hover__light hover__scale">
           <use href='#left-icon' />
         </svg>
       </button>
       <button class="icon arrow right" onclick="plusSlides(1)">
-        <svg class="hover">
+        <svg class="hover hover__light hover__scale
+        ">
           <use href='#right-icon' />
         </svg>
       </button>
