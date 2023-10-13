@@ -1,9 +1,12 @@
 export const getFeaturedProducts = (arr) =>
   arr.filter((product) => product.featured === true)
-const cart = JSON.parse(localStorage.getItem('cart')) || []
-const setCart = (newItemId) =>
-  localStorage.setItem('cart', JSON.stringify([...cart, newItemId]))
-
+function getCart() {
+  return JSON.parse(localStorage.getItem('cart')) || []
+}
+function setCart(newItemId) {
+  const cart = getCart()
+  return localStorage.setItem('cart', JSON.stringify([...cart, newItemId]))
+}
 export async function getProducts() {
   try {
     const response = await fetch('./data/db.json')
@@ -44,16 +47,10 @@ export function displayProducts(products) {
 
 export function addToCart(e) {
   setCart(e.currentTarget.getAttribute('data-product-id'))
-  return updateCart()
+  updateCart()
 }
 
 export function showCart() {
-  const modal = document.getElementById('cart-modal-container')
-  const content = document.getElementById('cart-modal')
-
-  return (modal.style.display =
-    modal.style.display !== 'flex' ? 'flex' : 'none')
-
   // const prodInCart = cart.map((prodId) =>
   //   productsDb.filter((product) => product.id === prodId)
   // )
@@ -72,9 +69,27 @@ export function showCart() {
   // modal.style.display = 'block'
 }
 
-export function updateCart() {
+export async function updateCart() {
+  const productsDb = await getProducts()
+  const cart = getCart()
   const cartBtn = document.querySelector('#show-cart-btn > .count')
+  const cartList = document.getElementById('cart-modal')
+  let output = ''
   if (cart.length && cart.length > 0) {
+    let prodIncart = []
+    output += '<ul>'
+    cart.forEach(
+      (productId) =>
+        (prodIncart = [
+          ...prodIncart,
+          ...productsDb.filter(
+            (product) => product.id.toString() === productId
+          ),
+        ])
+    ),
+      prodIncart.forEach((product) => (output += `<li>${product.model}</li>`))
+    output += '</ul>'
     cartBtn.textContent = cart.length
+    cartList.innerHTML = output
   }
 }
