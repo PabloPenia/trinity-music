@@ -1,173 +1,107 @@
-/* UTILS */
-.flex {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	gap: 1em;
-}
-.hover {
-	transition: var(--trans__off);
-}
-.hover:hover,
-.hover:active {
-	transform: scale(1.2);
-	transition: var(--trans__on);
-}
-.sprite {
-	display: none;
-}
-/* SVG */
-.icon {
-	display: block;
-	position: relative;
-	height: 0;
-	width: 3rem;
-	padding-top: 3rem;
-}
-.icon > svg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
 /* ESTRUCTURA PRINCIPAL */
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  color: var(--txt-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font__base);
+  font-size: var(--fsz__base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
 .app-wrapper {
-	background-image: linear-gradient(
-		to right bottom,
-		#1e1e40,
-		#242448,
-		#292950,
-		#2f2f58,
-		#353560,
-		#353560,
-		#353560,
-		#353560,
-		#2f2f58,
-		#292950,
-		#242448,
-		#1e1e40
-	);
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	/* background-image: url('../fotos/pexels01.jpg'); */
-	/* background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to right bottom,
+    #1e1e40,
+    #242448,
+    #292950,
+    #2f2f58,
+    #353560,
+    #353560,
+    #353560,
+    #353560,
+    #2f2f58,
+    #292950,
+    #242448,
+    #1e1e40
+  );
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-image: url('../fotos/pexels01.jpg'); */
+  /* background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed; */
 }
 main {
-	flex: 1;
+  flex: 1;
 }
 main > section {
-	padding: 2em var(--sp__sides);
+  padding: 2em var(--sp__sides);
 }
 .app-wrapper {
-	position: relative;
+  position: relative;
 }
-.app-wrapper > header {
-	/* margin: 5px 10px 20px 10px; top right bottom left sentido horario */
-	position: sticky;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	padding: 0.4em var(--sp__sides);
-	opacity: 0.96;
-	display: flex;
-	gap: 2em;
-	align-items: center;
-	justify-content: space-between;
-	background: var(--bg-color);
-	color: var(--txt-color);
-	width: 100%;
+/* UTILIDADES */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
-
-.logo {
-	text-shadow: 2px 0 5px hsla(var(--txt-color--alpha), 0.6);
+.flex-col {
+  flex-direction: column;
 }
-
-.search {
-	position: relative;
-	max-width: 60rem;
-	flex: 1;
+.abs {
+  position: absolute;
 }
-.search input {
-	width: 100%;
-	padding: 1em 2em;
-	background: transparent;
-	border: 1px solid currentColor;
-	border-radius: var(--border-radius);
-	box-shadow: -2px -2px 5px hsla(var(--txt-color--alpha), 0.6) inset;
-	color: var(--txt-color);
-	outline: 0;
+.rel {
+  position: relative;
 }
-.search .icon {
-	position: absolute;
-	top: 50%;
-	right: 1em;
-	transform: translateY(-50%);
+.pos-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-/* NAVEGACION PRINCIPAL */
-.navigation {
-	display: flex;
-	justify-content: center;
-	gap: 0.5em;
-	align-items: center;
-	color: white;
+.hover {
+  transition: var(--trans__off);
 }
-.menu {
-	display: flex;
-	gap: 0.5em;
+.hover:hover,
+.hover:focus,
+.hover:active {
+  transition: var(--trans__on);
 }
-.menu > li {
-	position: relative;
+.hover__scale:hover,
+.hover__scale:focus,
+.hover__scale:active {
+  transform: scale(1.2);
 }
-.menu a {
-	display: block;
-	padding: 10px;
-	font-family: 'Grandeurs';
-	color: var(--txt-color);
-	text-decoration: none;
-	font-size: 20px;
+.hover__light:hover,
+.hover__light:focus,
+.hover__light:active {
+  color: var(--txt-color--alt);
 }
-
-.submenu {
-	display: none;
-	width: 100%;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background: var(--bg-color);
-	z-index: 100;
+/* SVG */
+.sprite {
+  display: none;
 }
-
-/*.menu > li:hover .submenu {
-	display: block;
-}*/
-
-.cart {
-	position: relative;
+.icon {
+  display: block;
+  position: relative;
+  height: 0;
+  width: 3rem;
+  padding-top: 3rem;
 }
-.cart > ul {
-	display: none;
-	position: absolute;
-	top: 100%;
-	width: 200%;
-	background: var(--bg-color);
-}
-/* RESERVAR LO SIGUIENTE */
-.cart > button:hover + ul {
-	display: block;
-}
-.cart .icon {
-	color: var(--txt-color);
-}
-.cart .icon span {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: 0.4rem;
-	transform: translate(-50%, -50%);
-	color: var(--bg-color);
+.icon > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
