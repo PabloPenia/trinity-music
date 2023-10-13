@@ -127,16 +127,17 @@
   width: fit-content;
   min-width: 320px;
   height: calc(100vh - 4em);
-  overflow-y: auto;
   color: var(--bg-color);
+  background: var(--txt-color);
+  flex-direction: column;
+  padding: 0.4em 2em 1em;
+  gap: 0.5em;
 }
 #show-cart-btn.active + #cart-modal-container {
   display: flex;
 }
 #cart-modal {
-  width: 100%;
-  padding: 2em;
-  background: var(--txt-color);
+  overflow-y: auto;
   box-shadow: 2px 2px 5px 1px var(--bg-color) inset;
 }
 #cart-modal li {
