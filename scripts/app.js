@@ -33,12 +33,26 @@ document.addEventListener('DOMContentLoaded', async () => {
   mostrarContactoBtn.addEventListener("click", function () {
     nosotros.classList.remove("active")
     contacto.classList.toggle("active")
+
+    if (contacto.classList.contains("active")) {
+      // Scroll to the newly displayed element
+      contacto.scrollIntoView({ behavior: "smooth" });
+    }
  })
+
+ 
 
   mostrarNosotrosBtn.addEventListener("click", function () {
     contacto.classList.remove("active")
     nosotros.classList.toggle("active")
+
+    if (nosotros.classList.contains("active")) {
+      // Scroll to the newly displayed element
+      nosotros.scrollIntoView({ behavior: "smooth" });
+    }
 })
+
+
 
   //
   const cerrarVentanaBtn = document.getElementById('cerrarmiModal')
