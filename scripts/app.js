@@ -24,17 +24,35 @@ document.addEventListener('DOMContentLoaded', async () => {
   )
 
   //
-  const mostrarFooterBtn = document.getElementById('mostrar-footer-btn')
-  const footer = document.getElementById('footer')
+  const mostrarContactoBtn = document.getElementById('mostrar-contacto-btn')
+  const contacto = document.getElementById('contacto')
 
-  mostrarFooterBtn.addEventListener('click', function () {
-    const value = footer.style.display
-    if (value === 'none') {
-      return (footer.style.display = 'flex')
-    } else {
-      return (footer.style.display = 'none')
+  const mostrarNosotrosBtn = document.getElementById('mostrar-nosotros-btn')
+  const nosotros = document.getElementById('nosotros')
+
+  mostrarContactoBtn.addEventListener("click", function () {
+    nosotros.classList.remove("active")
+    contacto.classList.toggle("active")
+
+    if (contacto.classList.contains("active")) {
+      // Scroll to the newly displayed element
+      contacto.scrollIntoView({ behavior: "smooth" });
     }
-  })
+ })
+
+ 
+
+  mostrarNosotrosBtn.addEventListener("click", function () {
+    contacto.classList.remove("active")
+    nosotros.classList.toggle("active")
+
+    if (nosotros.classList.contains("active")) {
+      // Scroll to the newly displayed element
+      nosotros.scrollIntoView({ behavior: "smooth" });
+    }
+})
+
+
 
   //
   const cerrarVentanaBtn = document.getElementById('cerrarmiModal')
