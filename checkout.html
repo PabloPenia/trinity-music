@@ -9,28 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/app.css" />
-  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/cart.css" />
   <link rel="icon" href="fotos/logo.ico">
   <script type="module" src="scripts/app.js" defer></script>
-  <script src="scripts/slideshow.js" defer></script>
-  <title>TrinityMusic</title>
+  <title>Pagar | TrinityMusic</title>
 </head>
 
 <body>
-<!-- <div id="notification" class="pos-center flex flex-col">
-    <p>Se agrego el producto al carro.</p>
-    <p><button onclick="showCart">Ver carro</button> para editar.</p>
-  </div> -->
-  <div id="miModal" class="miModal-ventana">
-    <div class="miModal-contenido">
-      <h2>Suscríbete para tener las ultimas novedades</h2>
-      <p>¡Se el primero en enterarte de lo que llega a la tienda!</p>
-      <input type="email" placeholder="Ingresa tu e-mail">
-      <button type="submit" class="btnSuscribirme">Suscribirme</button>
-      <button id="cerrarmiModal">Cerrar</button>
-    </div>
-  </div>
-
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="sprite">
     <defs>
       <symbol id="add-to-cart-icon" viewBox="0 0 90 90">
@@ -103,74 +88,13 @@
       </div>
 
     </header>
-    <section class="slideshow-container">
-      <div class="slide fade">
-        <div class="overlay"></div>
-        <img src="fotos/showcase/01.jpg" alt="Image 1">
-      </div>
-      <div class="slide fade">
-        <div class="overlay"></div>
-        <img src="fotos/showcase/02.jpg" alt="Image 2">
-      </div>
-      <div class="slide fade">
-        <div class="overlay"></div>
-        <img src="fotos/showcase/03.jpg" alt="Image 3">
-      </div>
-      <div class="slide fade">
-        <div class="overlay"></div>
-        <img src="fotos/showcase/04.jpg" alt="Image 3">
-      </div>
-      <div class="slide fade">
-        <div class="overlay"></div>
-        <img src="fotos/showcase/05.jpg" alt="Image 3">
-      </div>
-      <div class="slide-content">
-        <h2>Tu Destino Musical</h2>
-        <p>Descubre una gama única de instrumentos musicales que inspirarán tu pasión por la música.</p>
-        <a class="link flex hover hover__light hover__scale" href="#destacados">Explorar Instrumentos</a>
-      </div>
-      <button class="icon arrow left" onclick="plusSlides(-1)">
-        <svg class="hover hover__light hover__scale">
-          <use href='#left-icon' />
-        </svg>
-      </button>
-      <button class="icon arrow right" onclick="plusSlides(1)">
-        <svg class="hover hover__light hover__scale
-        ">
-          <use href='#right-icon' />
-        </svg>
-      </button>
-      <div class="pagination">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-      </div>
-    </section>
     <main>
-      <section>
-        <div id="destacados" class="gallery-wrapper">
-          <section aria-labelledby="feat-title">
-            <h2 id="feat-title">Artículos Destacados</h2>
-            <div id="galeria" class="cards-gallery flex">
-            </div>
-          </section>
-        </div>
-      </section>
-      <h2>Mas Instrumentos</h2>
-      <section class="instrumentos" id="instrumentos">
-        <div class="box">
-          <h2>Cuerdas</h2>
-          <img src="fotos/Img1.jpg">
-        </div>
-        <div class="box">
-          <h2>Percusión</h2>
-          <img src="fotos/Img2.jpg">
-        </div>
-        <div class="box">
-          <h2>Viento</h2>
-          <img src="fotos/Img1.jpg">
+      <section class="flex flex-col">
+        <h2>Pagar</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda architecto tempore illo, unde praesentium placeat vel totam aut reprehenderit mollitia corrupti numquam dicta quis magnam omnis pariatur porro commodi modi.</p>
+        <div>
+          <a href="cart.html" class="link hover hover__light hover__scale">Editar Carro</a>
+          <a href="#" class="link hover hover__light hover__scale">Pagar</a>
         </div>
       </section>
     </main>
@@ -250,9 +174,7 @@
         <button id="mostrar-nosotros-btn" type="button">Nosotros</button>
       </div>
 
-    </footer>
-
-    
+    </footer>   
 </body>
 
 </html>
