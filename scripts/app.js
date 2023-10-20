@@ -3,33 +3,42 @@ import {
   getProducts,
   displayProducts,
   addToCart,
+  getCart,
   updateCart,
 } from './functions.js'
 
 document.addEventListener('DOMContentLoaded', async () => {
   updateCart() // si habian productos en el carro en una sesion anterior los carga
+
   if (window.location) {
-    const isIndex =
-      window.location.pathname === '/index.html' ||
-      window.location.pathname === '/'
+    switch (window.location.pathname) {
+      case '/index.html':
+      case '/':
+        // ACA SOLO PARA EL HOME
+        const productsDb = await getProducts()
+        const featured = getFeaturedProducts(productsDb)
+        displayProducts(featured) // muestra los productos en la galeria
 
-    if (isIndex) {
-      const productsDb = await getProducts()
-      const featured = getFeaturedProducts(productsDb)
-      displayProducts(featured) // muestra los productos en la galeria
+        const addToCartButtons = document.querySelectorAll('.cart-btn')
+        addToCartButtons.forEach((button) => {
+          button.addEventListener('click', addToCart)
+        })
 
-      const addToCartButtons = document.querySelectorAll('.cart-btn')
-      addToCartButtons.forEach((button) => {
-        button.addEventListener('click', addToCart)
-      })
+        // Modal Suscribirse
+        const cerrarVentanaBtn = document.getElementById('cerrarmiModal')
+        const miModal = document.getElementById('miModal')
 
-      // Modal Suscribirse
-      const cerrarVentanaBtn = document.getElementById('cerrarmiModal')
-      const miModal = document.getElementById('miModal')
-
-      cerrarVentanaBtn.addEventListener('click', function () {
-        return (miModal.style.display = 'none')
-      })
+        cerrarVentanaBtn.addEventListener('click', function () {
+          return (miModal.style.display = 'none')
+        })
+        break
+      case '/cart.html':
+        const cart = getCart()
+        console.log(cart)
+        break
+      case '/checkout.html':
+      default:
+        break
     }
   }
 

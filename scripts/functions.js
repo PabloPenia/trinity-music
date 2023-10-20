@@ -1,11 +1,21 @@
 export const getFeaturedProducts = (arr) =>
   arr.filter((product) => product.featured === true)
-function getCart() {
-  return JSON.parse(localStorage.getItem('cart')) || []
+export function getCart(products) {
+  const cartIds = JSON.parse(localStorage.getItem('cart')) || []
+  let cart = []
+  if (cart.length > 0) {
+    cartIds.forEach(
+      (productId) =>
+        (cart = [
+          ...products.filter((product) => product.id.toString() === productId),
+        ])
+    )
+  }
+  return cart
 }
 function setCart(newItemId) {
-  const cart = getCart()
-  return localStorage.setItem('cart', JSON.stringify([...cart, newItemId]))
+  const cartIds = JSON.parse(localStorage.getItem('cart')) || []
+  return localStorage.setItem('cart', JSON.stringify([...cartIds, newItemId]))
 }
 export async function getProducts() {
   try {
@@ -71,23 +81,14 @@ export function showCart() {
 
 export async function updateCart() {
   const productsDb = await getProducts()
-  const cart = getCart()
+  const cart = getCart(productsDb)
   const cartBtn = document.querySelector('#show-cart-btn > .count')
   const cartList = document.getElementById('cart-modal')
   let output = ''
-  if (cart.length && cart.length > 0) {
-    let prodIncart = []
+  console.log(cart)
+  if (cart?.length > 0) {
     output += '<ul>'
-    cart.forEach(
-      (productId) =>
-        (prodIncart = [
-          ...prodIncart,
-          ...productsDb.filter(
-            (product) => product.id.toString() === productId
-          ),
-        ])
-    ),
-      prodIncart.forEach((product) => (output += `<li>${product.model}</li>`))
+    cart.forEach((product) => (output += `<li>${product.model}</li>`))
     output += '</ul>'
     cartBtn.textContent = cart.length
     cartList.innerHTML = output
