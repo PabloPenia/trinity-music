@@ -9,7 +9,7 @@ import {
 
 document.addEventListener('DOMContentLoaded', async () => {
   updateCart() // si habian productos en el carro en una sesion anterior los carga
-
+  // codigo que se ejecuta segun la URL
   if (window.location) {
     switch (window.location.pathname) {
       case '/index.html':
@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const addToCartButtons = document.querySelectorAll('.cart-btn')
         addToCartButtons.forEach((button) => {
-          button.addEventListener('click', addToCart)
+          button.addEventListener('click', function (e) {
+            return addToCart(e, productsDb)
+          })
         })
 
         // Modal Suscribirse
@@ -33,15 +35,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         })
         break
       case '/cart.html':
+        // Pagina del carro
         const cart = getCart()
         console.log(cart)
         break
       case '/checkout.html':
+      // Pagina del formulario
       default:
+        // Resto de paginas sin contar la anteriores
         break
     }
   }
-
+  // Mostrar modal del carro
   const showCartBtn = document.getElementById('show-cart-btn')
   showCartBtn.addEventListener('click', () =>
     showCartBtn.classList.toggle('active')
