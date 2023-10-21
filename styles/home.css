@@ -113,15 +113,23 @@ img {
 /* redeploy */
 
 /* GALERIA */
-.btn {
+.cart-buttons {
+  position: absolute;
+  right: 10px;
+  bottom: 30%;
+  gap: 0.2em;
+}
+button[class^='cart-btn--'],
+button[class*=' cart-btn--'] {
   padding: 0.5em;
-  display: inline-block;
-  transition: var(--transition__on);
+  display: block;
   border-radius: 1rem;
 }
-.btn:hover {
-  transform: scale(1.2);
-  transition: var(--transition__off);
+.cart-btn--remove {
+  background-color: red !important;
+}
+.cart-buttons .icon {
+  color: var(--txt-color);
 }
 #feat-title {
   font-size: 2em;
@@ -134,18 +142,6 @@ img {
   position: relative;
   max-width: 250px;
   color: var(--txt-color--alt);
-}
-.cards-gallery > article button {
-  color: var(--txt-color);
-  position: absolute;
-  right: 10px;
-  bottom: 30%;
-  border: 1px solid currentColor;
-}
-.cards-gallery > article button .icon {
-  width: 4rem;
-  padding-top: 4rem;
-  color: var(--bg-color);
 }
 .card__title {
   display: block;

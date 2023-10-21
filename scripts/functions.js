@@ -22,6 +22,7 @@ export async function getProducts() {
 export const getFeaturedProducts = (arr) =>
   arr.filter((product) => product.featured === true)
 export function displayProducts(products) {
+  const cart = getCart()
   // Genera una galeria con los products pasados en parametro
   const galeria = document.getElementById('galeria')
   if (products.length > 0) {
@@ -33,10 +34,28 @@ export function displayProducts(products) {
             <h3>${product.model}</h3>
             <span>$${product.price}</span>
           </div>
-          <button class="cart-btn btn flex" type="button" data-product-id="${product.id}"><span class="icon"><svg>
+          <div class="cart-buttons flex flex-col">
+          <button class="cart-btn--add link hover hover__scale hover__light" type="button" data-product-id="${
+            product.id
+          }"><span class="icon"><svg>
                 <use href='#add-to-cart-icon' />
               </svg></span>
           </button>
+          ${
+            cart.some((item) => item.id === product.id) &&
+            `<button
+                class='cart-btn--remove link hover hover__scale hover__light'
+                type='button'
+                data-product-id='${product.id}'
+              >
+                <span class='icon'>
+                  <svg>
+                    <use href='#add-to-cart-icon' />
+                  </svg>
+                </span>
+              </button>`
+          }
+          </div>
         </article>
         `
     })
@@ -63,10 +82,21 @@ export function addToCart(e, db) {
   setCart(newItem)
   updateCart()
 }
+export function removeFromCart(e) {
+  // Agrega items y actualiza el carro
+  const cart = getCart()
+  const newItems = cart.filter(
+    (item) =>
+      item.id.toString() !== e.currentTarget.getAttribute('data-product-id')
+  )
+  localStorage.setItem('cart', JSON.stringify([...newItems]))
+  updateCart()
+}
 
 export function updateCart() {
   // Actualiza el carro
   const cart = getCart()
+  console.log(cart)
   const cartBtn = document.querySelector('#show-cart-btn > .count')
   const cartList = document.getElementById('cart-modal')
   let output = ''
