@@ -1,33 +1,33 @@
 //* PRODUCTOS
 const getProductById = (id, db) => {
-  // Busca un producto por su id, retorna el objeto en un array
-  const item = db.filter((item) => item.id.toString() === id)
-  return item
+	// Busca un producto por su id, retorna el objeto en un array
+	const item = db.filter((item) => item.id.toString() === id)
+	return item
 }
 export async function getProducts() {
-  // Lee los productos de la DB
-  try {
-    const response = await fetch('./data/db.json')
-    if (!response.ok) {
-      throw new Error('No se encuetra el archivo json')
-    }
-    const products = await response.json()
-    return products
-  } catch (e) {
-    console.log('[ERROR_DB_FETCH]', e)
-    return []
-  }
+	// Lee los productos de la DB
+	try {
+		const response = await fetch('./data/db.json')
+		if (!response.ok) {
+			throw new Error('No se encuetra el archivo json')
+		}
+		const products = await response.json()
+		return products
+	} catch (e) {
+		console.log('[ERROR_DB_FETCH]', e)
+		return []
+	}
 }
 // Filtra los productos por destacados
 export const getFeaturedProducts = (arr) =>
-  arr.filter((product) => product.featured === true)
+	arr.filter((product) => product.featured === true)
 export function displayProducts(products) {
-  const cart = getCart()
-  // Genera una galeria con los products pasados en parametro
-  const galeria = document.getElementById('galeria')
-  if (products.length > 0) {
-    products.forEach((product) => {
-      galeria.innerHTML += `
+	const cart = getCart()
+	// Genera una galeria con los products pasados en parametro
+	const galeria = document.getElementById('galeria')
+	if (products.length > 0) {
+		products.forEach((product) => {
+			galeria.innerHTML += `
         <article>
           <img src="${product.image}" alt="">
           <div class="flex card__title">
@@ -36,14 +36,14 @@ export function displayProducts(products) {
           </div>
           <div class="cart-buttons flex flex-col">
           <button class="cart-btn--add link hover hover__scale hover__light" type="button" data-product-id="${
-            product.id
-          }"><span class="icon"><svg>
+						product.id
+					}"><span class="icon"><svg>
                 <use href='#add-to-cart-icon' />
               </svg></span>
           </button>
           ${
-            cart.some((item) => item.id === product.id) &&
-            `<button
+						cart.some((item) => item.id === product.id)
+							? `<button
                 class='cart-btn--remove link hover hover__scale hover__light'
                 type='button'
                 data-product-id='${product.id}'
@@ -54,59 +54,60 @@ export function displayProducts(products) {
                   </svg>
                 </span>
               </button>`
-          }
+							: ''
+					}
           </div>
         </article>
         `
-    })
-  } else {
-    galeria.innerHTML += '<p>No hay productos que mostrar</p>'
-  }
+		})
+	} else {
+		galeria.innerHTML += '<p>No hay productos que mostrar</p>'
+	}
 }
 //* CARRITO
 export function getCart() {
-  // Obtiene los productos del carro
-  return JSON.parse(localStorage.getItem('cart')) || []
+	// Obtiene los productos del carro
+	return JSON.parse(localStorage.getItem('cart')) || []
 }
 function setCart(newItems) {
-  // Agrega un array de items al carro
-  const cart = getCart()
-  return localStorage.setItem('cart', JSON.stringify([...cart, ...newItems]))
+	// Agrega un array de items al carro
+	const cart = getCart()
+	return localStorage.setItem('cart', JSON.stringify([...cart, ...newItems]))
 }
 export function addToCart(e, db) {
-  // Agrega items y actualiza el carro
-  const newItem = getProductById(
-    e.currentTarget.getAttribute('data-product-id'),
-    db
-  )
-  setCart(newItem)
-  updateCart()
+	// Agrega items y actualiza el carro
+	const newItem = getProductById(
+		e.currentTarget.getAttribute('data-product-id'),
+		db
+	)
+	setCart(newItem)
+	updateCart()
 }
 export function removeFromCart(e) {
-  // Agrega items y actualiza el carro
-  const cart = getCart()
-  const newItems = cart.filter(
-    (item) =>
-      item.id.toString() !== e.currentTarget.getAttribute('data-product-id')
-  )
-  localStorage.setItem('cart', JSON.stringify([...newItems]))
-  updateCart()
+	// Agrega items y actualiza el carro
+	const cart = getCart()
+	const newItems = cart.filter(
+		(item) =>
+			item.id.toString() !== e.currentTarget.getAttribute('data-product-id')
+	)
+	localStorage.setItem('cart', JSON.stringify([...newItems]))
+	updateCart()
 }
 
 export function updateCart() {
-  // Actualiza el carro
-  const cart = getCart()
-  console.log(cart)
-  const cartBtn = document.querySelector('#show-cart-btn > .count')
-  const cartList = document.getElementById('cart-modal')
-  let output = ''
-  if (cart?.length > 0) {
-    output += '<ul>'
-    cart.forEach((product) => (output += `<li>${product.model}</li>`))
-    output += '</ul>'
-    cartBtn.textContent = cart.length
-  } else {
-    output += '<p>No hay productos en el carro</p>'
-  }
-  cartList.innerHTML = output
+	// Actualiza el carro
+	const cart = getCart()
+	console.log(cart)
+	const cartBtn = document.querySelector('#show-cart-btn > .count')
+	const cartList = document.getElementById('cart-modal')
+	let output = ''
+	if (cart?.length > 0) {
+		output += '<ul>'
+		cart.forEach((product) => (output += `<li>${product.model}</li>`))
+		output += '</ul>'
+		cartBtn.textContent = cart.length
+	} else {
+		output += '<p>No hay productos en el carro</p>'
+	}
+	cartList.innerHTML = output
 }
