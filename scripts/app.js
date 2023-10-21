@@ -3,6 +3,7 @@ import {
   getProducts,
   displayProducts,
   addToCart,
+  removeFromCart,
   getCart,
   updateCart,
 } from './functions.js'
@@ -19,11 +20,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const featured = getFeaturedProducts(productsDb)
         displayProducts(featured) // muestra los productos en la galeria
 
-        const addToCartButtons = document.querySelectorAll('.cart-btn')
+        const addToCartButtons = document.querySelectorAll('.cart-btn--add')
         addToCartButtons.forEach((button) => {
           button.addEventListener('click', function (e) {
             return addToCart(e, productsDb)
           })
+        })
+        const removeFromCartButtons =
+          document.querySelectorAll('.cart-btn--remove')
+        removeFromCartButtons.forEach((button) => {
+          button.addEventListener('click', removeFromCart)
         })
 
         // Modal Suscribirse
