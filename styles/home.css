@@ -125,11 +125,13 @@ button[class*=' cart-btn--'] {
   display: block;
   border-radius: 1rem;
 }
+.cart-btn--add:disabled {
+  background-color: var(--txt-color);
+  color: var(--bg-color);
+  cursor: not-allowed;
+}
 .cart-btn--remove {
   background-color: red !important;
-}
-.cart-buttons .icon {
-  color: var(--txt-color);
 }
 #feat-title {
   font-size: 2em;
