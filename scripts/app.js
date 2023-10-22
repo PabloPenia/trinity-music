@@ -6,6 +6,8 @@ import {
   removeFromCart,
   getCart,
   updateCart,
+  subsQtyFromCart,
+  addsQtyToCart,
 } from './functions.js'
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // ACA SOLO PARA EL HOME
         const productsDb = await getProducts()
         const featured = getFeaturedProducts(productsDb)
-        displayProducts(featured) // muestra los productos en la galeria
+        displayProducts('galeria', featured) // muestra los productos en la galeria
 
         const addToCartButtons = document.querySelectorAll('.cart-btn--add')
         addToCartButtons.forEach((button) => {
@@ -43,7 +45,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       case '/cart.html':
         // Pagina del carro
         const cart = getCart()
-        console.log(cart)
+        displayProducts('cart-list', cart, true)
+        const subsQtyBtn = document.querySelectorAll('.cart-btn-qty--minus')
+        const addsQtyBtn = document.querySelectorAll('.cart-btn-qty--plus')
+        const removeBtn = document.querySelectorAll('.cart-btn--remove')
+        subsQtyBtn.forEach((button) => {
+          button.addEventListener('click', subsQtyFromCart)
+        })
+        addsQtyBtn.forEach((button) => {
+          button.addEventListener('click', addsQtyToCart)
+        })
+        removeBtn.forEach((button) => {
+          button.addEventListener('click', removeFromCart)
+        })
         break
       case '/checkout.html':
       // Pagina del formulario
