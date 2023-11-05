@@ -1,0 +1,16 @@
+#cart-list {
+  align-items: unset;
+  width: 100%;
+}
+#cart-list > article {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex: 1;
+}
+#cart-list img {
+  width: 50px;
+}
+#cart-list input {
+  width: 3em;
+}
