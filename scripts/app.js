@@ -35,19 +35,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     contacto.classList.toggle("active")
 
     if (contacto.classList.contains("active")) {
-      // Scroll to the newly displayed element
       contacto.scrollIntoView({ behavior: "smooth" });
     }
  })
-
- 
 
   mostrarNosotrosBtn.addEventListener("click", function () {
     contacto.classList.remove("active")
     nosotros.classList.toggle("active")
 
     if (nosotros.classList.contains("active")) {
-      // Scroll to the newly displayed element
       nosotros.scrollIntoView({ behavior: "smooth" });
     }
 })
