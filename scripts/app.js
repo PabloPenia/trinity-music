@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     showCartBtn.classList.toggle('active')
   )
 
-  //
+  // Footer
   const mostrarContactoBtn = document.getElementById('mostrar-contacto-btn')
   const contacto = document.getElementById('contacto')
 
@@ -84,26 +84,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     contacto.classList.toggle('active')
 
     if (contacto.classList.contains("active")) {
-      // Scroll to the newly displayed element
       contacto.scrollIntoView({ behavior: "smooth" });
     }
  })
-
- 
 
   mostrarNosotrosBtn.addEventListener("click", function () {
     contacto.classList.remove("active")
     nosotros.classList.toggle("active")
 
     if (nosotros.classList.contains("active")) {
-      // Scroll to the newly displayed element
       nosotros.scrollIntoView({ behavior: "smooth" });
     }
 })
 
 
 
-  //
+  //Modal de Index
   const cerrarVentanaBtn = document.getElementById('cerrarmiModal')
   const miModal = document.getElementById('miModal')
 
