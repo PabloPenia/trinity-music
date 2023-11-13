@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/app.css" />
   <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/slideshow.css" />
   <link rel="icon" href="fotos/logo.ico">
   <script type="module" src="scripts/app.js" defer></script>
   <script src="scripts/slideshow.js" defer></script>
@@ -92,8 +93,8 @@
             <h2>Tus productos</h2> 
             <div id="cart-modal">
               
-            </div>            
-            <a href="cart.html" class="link hover hover__light">Ver Carro</a>
+            </div>
+            <button onclick="() => alert('Sin implementar')">Checkout</button>
           </div>
         </div>
       </div>
@@ -123,7 +124,7 @@
       <div class="slide-content">
         <h2>Tu Destino Musical</h2>
         <p>Descubre una gama única de instrumentos musicales que inspirarán tu pasión por la música.</p>
-        <a class="link flex hover hover__light hover__scale" href="#destacados">Explorar Instrumentos</a>
+        <a class="flex hover hover__scale" href="#destacados">Explorar Instrumentos</a>
       </div>
       <button class="icon arrow left" onclick="plusSlides(-1)">
         <svg class="hover hover__light hover__scale">
