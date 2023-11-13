@@ -264,6 +264,7 @@ main > section {
 
 /*footer*/
 
+
 footer .active {
   display: flex;
 }
@@ -338,7 +339,32 @@ footer .active {
   text-align: center;
 }
 
+#mostrar-contacto-btn{
+  width: 100px;
+  height: 50px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: hsl(258, 47%, 49%);
+}
+
+#mostrar-contacto-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px hsla(0, 0%, 99%, 0.794);
+}
+
+#mostrar-nosotros-btn{
+  width: 100px;
+  height: 50px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: hsl(258, 47%, 49%);
+}
+
+#mostrar-nosotros-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px hsla(0, 0%, 99%, 0.794);
+}
+
 /*fin footer*/
+
 
 .miModal-ventana {
   position: fixed;
