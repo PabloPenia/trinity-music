@@ -1,47 +1,130 @@
 [
-	{
-		"id": 1,
-		"model": "Js32q Dka Arch Top Tgb",
-		"image": "img/productos/guitarra-jackson-js32q.png",
-		"brand": "Jackson",
-		"category": "Guitarras",
-		"price": 729,
-		"featured": true
-	},
-	{
-		"id": 2,
-		"model": "JS32 Dinky arch top DKAM Gloss Black",
-		"image": "img/productos/guitarra-electrica-jackson-js32.png",
-		"brand": "Jackson",
-		"category": "Guitarras",
-		"price": 715,
-		"featured": true
-	},
-	{
-		"id": 3,
-		"model": "JEMJR STEVE VAI WH",
-		"image": "img/productos/guitarra-ibanez-jemjr.png",
-		"brand": "Ibanez",
-		"category": "Guitarras",
-		"price": 749,
-		"featured": true
-	},
-	{
-		"id": 4,
-		"model": "SES60 natural",
-		"image": "img/productos/guitarra-stagg.png",
-		"brand": "Stagg",
-		"category": "Guitarras",
-		"price": 320,
-		"featured": true
-	},
-	{
-		"id": 5,
-		"model": "L serie STD violin burst zurdo",
-		"image": "img/productos/guitarra-stagg-l.png",
-		"brand": "Stagg",
-		"category": "Guitarras",
-		"price": 420,
-		"featured": true
-	}
+  {
+    "id": 1,
+    "model": "Js32q Dka Arch Top Tgb",
+    "image": "img/productos/guitarra-jackson-js32q.png",
+    "brand": "Jackson",
+    "category": "Guitarras",
+    "price": 729,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "model": "JS32 Dinky arch top DKAM Gloss Black",
+    "image": "img/productos/guitarra-electrica-jackson-js32.png",
+    "brand": "Jackson",
+    "category": "Guitarras",
+    "price": 715,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "model": "JEMJR STEVE VAI WH",
+    "image": "img/productos/guitarra-ibanez-jemjr.png",
+    "brand": "Ibanez",
+    "category": "Guitarras",
+    "price": 749,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "model": "SES60 natural",
+    "image": "img/productos/guitarra-stagg.png",
+    "brand": "Stagg",
+    "category": "Guitarras",
+    "price": 320,
+    "featured": true
+  },
+  {
+    "id": 5,
+    "model": "L serie STD violin burst zurdo",
+    "image": "img/productos/guitarra-stagg-l.png",
+    "brand": "Stagg",
+    "category": "Guitarras",
+    "price": 420,
+    "featured": true
+  },
+  {
+    "id": 6,
+    "model": "Bajo 1",
+    "image": "img/productos/guitarra-jackson-js32q.png",
+    "brand": "Jackson",
+    "category": "Bajos",
+    "price": 729,
+    "featured": true
+  },
+  {
+    "id": 7,
+    "model": "Bajo 2",
+    "image": "img/productos/guitarra-electrica-jackson-js32.png",
+    "brand": "Jackson",
+    "category": "Bajos",
+    "price": 715
+  },
+  {
+    "id": 8,
+    "model": "Bajo 3",
+    "image": "img/productos/guitarra-ibanez-jemjr.png",
+    "brand": "Ibanez",
+    "category": "Bajos",
+    "price": 749,
+    "featured": true
+  },
+  {
+    "id": 9,
+    "model": "Bajo 4",
+    "image": "img/productos/guitarra-stagg.png",
+    "brand": "Stagg",
+    "category": "Bajos",
+    "price": 320
+  },
+  {
+    "id": 10,
+    "model": "Bajo 5",
+    "image": "img/productos/guitarra-stagg-l.png",
+    "brand": "Stagg",
+    "category": "Bajos",
+    "price": 420
+  },
+  {
+    "id": 11,
+    "model": "Bateria",
+    "image": "img/productos/guitarra-jackson-js32q.png",
+    "brand": "Jackson",
+    "category": "Percusion",
+    "price": 729,
+    "featured": true
+  },
+  {
+    "id": 12,
+    "model": "Bateria",
+    "image": "img/productos/guitarra-electrica-jackson-js32.png",
+    "brand": "Jackson",
+    "category": "Percusion",
+    "price": 715
+  },
+  {
+    "id": 13,
+    "model": "Bateria",
+    "image": "img/productos/guitarra-ibanez-jemjr.png",
+    "brand": "Ibanez",
+    "category": "Percusion",
+    "price": 749
+  },
+  {
+    "id": 14,
+    "model": "Bateria",
+    "image": "img/productos/guitarra-stagg.png",
+    "brand": "Stagg",
+    "category": "Percusion",
+    "price": 320
+  },
+  {
+    "id": 15,
+    "model": "Bateria",
+    "image": "img/productos/guitarra-stagg-l.png",
+    "brand": "Stagg",
+    "category": "Percusion",
+    "price": 420
+  }
 ]

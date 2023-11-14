@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 100%;
 }
 main {
   flex: 1;
@@ -264,7 +265,6 @@ main > section {
 
 /*footer*/
 
-
 footer .active {
   display: flex;
 }
@@ -301,7 +301,7 @@ label {
 }
 
 input,
-textarea{
+textarea {
   width: 100%;
   padding: 6px;
   box-sizing: border-box;
@@ -317,8 +317,10 @@ textarea{
 }
 
 #enviar:hover {
+
   background-color:hsl(258, 51%, 62%);
   transform: scale(1.2);
+
 }
 
 
@@ -341,10 +343,9 @@ textarea{
   padding-top: 2em;
 }
 
-
 /*Tiendas*/
 
-.contenedor-tiendas{
+.contenedor-tiendas {
   display: none;
   flex-direction: row;
   padding: 2em;
@@ -355,6 +356,7 @@ textarea{
   color: var(--txt-color);
   padding-left: 2em;
 }
+
 
 .cont-tiendas ul li {
   justify-content: center;
@@ -367,6 +369,7 @@ textarea{
 
 .mapa{
   padding: 2em;
+
 }
 
 /*Botones footer*/
@@ -393,6 +396,7 @@ textarea{
   box-shadow: 0 0 10px hsla(0, 0%, 99%, 0.794);
 }
 
+
 .redes {
   color: var(--txt-color);
   padding-right: 2em;
@@ -402,8 +406,8 @@ textarea{
   color: var(--txt-color--alt);
 }
 
-/*fin footer*/
 
+/*fin footer*/
 
 .miModal-ventana {
   position: fixed;
