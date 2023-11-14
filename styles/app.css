@@ -372,7 +372,7 @@ textarea{
 /*Botones footer*/
 
 .botones-footer {
-  display: fixed;
+  position: fixed;
   flex-direction: row;
   background: var(--bg-color);
   padding: 0.1em;
