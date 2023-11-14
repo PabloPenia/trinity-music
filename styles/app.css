@@ -276,6 +276,8 @@ footer .active {
   background-color: var(--bg-color);
 }
 
+/*Contacto*/
+
 .contenedor-contacto {
   display: none;
   flex-direction: row;
@@ -297,8 +299,33 @@ footer .active {
   line-height: 0;
 }
 
-.mapa {
-  padding-top: 3em;
+.forumlario-contacto {
+  flex-direction: row;
+  max-width: 600px;
+  margin: 60px auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea{
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+#enviar {
+  background-color: hsl(258, 47%, 49%);
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+}
+
+#enviar:hover {
+  background-color:hsl(258, 51%, 62%)
 }
 
 .redes {
@@ -313,6 +340,8 @@ footer .active {
   color: var(--txt-color--alt);
   transform: scale(1.4);
 }
+
+/*Nosotros*/
 
 .contenedor-nosotros {
   display: none;
@@ -330,6 +359,31 @@ footer .active {
   padding-top: 2em;
 }
 
+
+/*Tiendas*/
+
+.contenedor-tiendas{
+  display: none;
+  flex-direction: row;
+  padding: 2em;
+}
+
+.contenedor-tiendas > h2 {
+  color: var(--txt-color);
+  padding-left: 2em;
+}
+
+.store{
+  padding-top: 2em;
+}
+
+.mapa{
+  width: 400px;
+  height: 100px; 
+}
+
+/*Botones footer*/
+
 .botones-footer {
   display: fixed;
   background-color: hsl(258, 47%, 49%);
@@ -339,29 +393,18 @@ footer .active {
   text-align: center;
 }
 
-#mostrar-contacto-btn{
+.butn {
   width: 100px;
   height: 50px;
   transition: transform 0.3s, box-shadow 0.3s;
   background-color: hsl(258, 47%, 49%);
 }
 
-#mostrar-contacto-btn:hover {
+.butn:hover {
   transform: scale(1.2);
   box-shadow: 0 0 10px hsla(0, 0%, 99%, 0.794);
 }
 
-#mostrar-nosotros-btn{
-  width: 100px;
-  height: 50px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  background-color: hsl(258, 47%, 49%);
-}
-
-#mostrar-nosotros-btn:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 10px hsla(0, 0%, 99%, 0.794);
-}
 
 /*fin footer*/
 

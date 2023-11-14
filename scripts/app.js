@@ -79,24 +79,38 @@ document.addEventListener('DOMContentLoaded', async () => {
   const mostrarNosotrosBtn = document.getElementById('mostrar-nosotros-btn')
   const nosotros = document.getElementById('nosotros')
 
+  const mostrarTiendasBtn = document.getElementById('mostrar-tiendas-btn')
+  const tiendas = document.getElementById('tiendas')
+
   mostrarContactoBtn.addEventListener('click', function () {
     nosotros.classList.remove('active')
+    tiendas.classList.remove('active')
     contacto.classList.toggle('active')
 
     if (contacto.classList.contains("active")) {
-      contacto.scrollIntoView({ behavior: "smooth" });
+      contacto.scrollIntoView({ behavior: "smooth"});
     }
  })
 
   mostrarNosotrosBtn.addEventListener("click", function () {
     contacto.classList.remove("active")
+    tiendas.classList.remove('active')
     nosotros.classList.toggle("active")
 
     if (nosotros.classList.contains("active")) {
-      nosotros.scrollIntoView({ behavior: "smooth" });
+      nosotros.scrollIntoView({ behavior: "smooth"});
     }
 })
 
+  mostrarTiendasBtn.addEventListener("click", function () {
+    contacto.classList.remove("active")
+    nosotros.classList.remove('active')
+    tiendas.classList.toggle("active")
+
+  if (tiendas.classList.contains("active")) {
+    tiendas.scrollIntoView({ behavior: "smooth"});
+  }
+})
 
 
   //Modal de Index
