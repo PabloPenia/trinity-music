@@ -18,36 +18,44 @@ export async function getProducts() {
     return []
   }
 }
+'ggghg'.to
 // Filtra los productos por destacados
 export const getFeaturedProducts = (arr) =>
   arr.filter((product) => product.featured === true)
+
+export const getProductsByCat = (arr, cat) =>
+  arr.filter((product) => product.category.toLowerCase() === cat.toLowerCase())
 export function displayProducts(element, products, displayList = false) {
   const cart = getCart()
   // Genera una galeria con los products pasados en parametro
   const galeria = document.getElementById(element)
+  galeria.innerHTML = ''
   if (products.length > 0) {
     products.forEach((product) => {
       const isInCart = !displayList
         ? cart.some((item) => item.id === product.id)
         : undefined
       galeria.innerHTML += `
-        <article>
+        <article id="${element}-${product.id}">
           <img src="${product.image}" alt="">
 					${
             displayList
               ? `
 							<h3>${product.model}</h3>
-							<div class='cart-qty flex'>
-								<button class="link cart-btn-qty--minus" data-product-id="${
+              <input type="number" value="${product.quantity}" />
+              <span>$${product.price * product.quantity}</span>
+							<div class='cart-qty'>
+                <button class="link cart-btn-qty--minus" data-product-id="${
                   product.id
                 }">-</button>
-								<input type="number" value="${product.quantity}" />
 								<button class="link cart-btn-qty--plus" data-product-id="${
                   product.id
                 }">+</button>
+                <button class="link cart-btn--remove" data-product-id="${
+                  product.id
+                }">X</button>
 							</div>
-							<span>$${product.price * product.quantity}</span>
-							<button class="link cart-btn--remove" data-product-id="${product.id}">X</button>
+							
 							`
               : `
 							<div class="flex card__title">
@@ -67,9 +75,23 @@ export function displayProducts(element, products, displayList = false) {
         </article>
         `
     })
+    const addToCartButtons = document.querySelectorAll('.cart-btn--add')
+    addToCartButtons.forEach((button) => {
+      button.addEventListener('click', function (e) {
+        return addToCart(e, products)
+      })
+    })
   } else {
     galeria.innerHTML += '<p>No hay productos que mostrar</p>'
   }
+}
+export function displayProductsByCat(e, arr) {
+  const products =
+    e.target.value === '*' ? arr : getProductsByCat(arr, e.target.value)
+  console.log(products)
+
+  displayProducts('filtered-products', products)
+  // .scrollIntoView({ behavior: 'smooth' })
 }
 //* CARRITO
 export function getCart() {
@@ -86,14 +108,14 @@ function setCart(newItem) {
 }
 export function subsQtyFromCart(e) {
   const cart = getCart()
-  const item = cart.find(
-    (item) =>
-      item.id.toString() === e.currentTarget.getAttribute('data-product-id')
-  )
+  const productId = e.currentTarget.getAttribute('data-product-id')
+  const input = document.querySelector(`#cart-list-${productId} input`)
+  const item = cart.find((item) => item.id.toString() === productId)
   if (item) {
-    if (item.quantity > 2) {
+    if (item.quantity > 1) {
       item.quantity--
       setCart(item)
+      input.value = item.quantity
       updateCart()
     } else {
       removeFromCart(e)
@@ -102,13 +124,13 @@ export function subsQtyFromCart(e) {
 }
 export function addsQtyToCart(e) {
   const cart = getCart()
-  const item = cart.find(
-    (item) =>
-      item.id.toString() === e.currentTarget.getAttribute('data-product-id')
-  )
+  const productId = e.currentTarget.getAttribute('data-product-id')
+  const input = document.querySelector(`#cart-list-${productId} input`)
+  const item = cart.find((item) => item.id.toString() === productId)
   if (item) {
     item.quantity++
     setCart(item)
+    input.value = item.quantity
     updateCart()
   }
 }
@@ -126,22 +148,26 @@ export function addToCart(e, db) {
   updateCart()
 }
 export function removeFromCart(e) {
-  // Agrega items y actualiza el carro
   const cart = getCart()
-  const newItems = cart.filter(
-    (item) =>
-      item.id.toString() !== e.currentTarget.getAttribute('data-product-id')
-  )
+  const productId = e.currentTarget.getAttribute('data-product-id')
+  const product = document.getElementById(`cart-list-${productId}`)
+  const newItems = cart.filter((item) => item.id.toString() !== productId)
   localStorage.setItem('cart', JSON.stringify([...newItems]))
+  product.remove()
+  if (cart.length === 1) {
+    const content = document.getElementById('cart-content')
+    content.innerHTML = `
+      <p>No hay productos que mostrar. <a href='index.html#destacados'>Agrega items al carro</a></p>
+    `
+  }
   updateCart()
 }
 
 export function updateCart() {
   // Actualiza el carro
   const cart = getCart()
-  console.log(cart)
   const cartBtn = document.querySelector('#show-cart-btn > .count')
-  const cartList = document.getElementById('cart-modal')
+  const cartModal = document.getElementById('cart-modal')
   let output = ''
   if (cart?.length > 0) {
     output += '<ul>'
@@ -151,5 +177,5 @@ export function updateCart() {
   } else {
     output += '<p>No hay productos en el carro</p>'
   }
-  cartList.innerHTML = output
+  cartModal.innerHTML = output
 }
