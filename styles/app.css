@@ -398,7 +398,6 @@ textarea{
 
 .redes:hover {
   color: var(--txt-color--alt);
-  transform: scale(1.4);
 }
 
 /*fin footer*/
