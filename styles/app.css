@@ -280,27 +280,17 @@ footer .active {
 
 .contenedor-contacto {
   display: none;
-  flex-direction: row;
   gap: calc(10%);
   padding: 2em;
+  border: 1px solid hsl(258, 47%, 49%);
 }
 
-.contacto > h2 {
+.contenedor-contacto > h2 {
   color: var(--txt-color);
   padding-left: 2em;
 }
 
-.contacto ul li {
-  justify-content: center;
-  color: var(--txt-color);
-  margin: 30px;
-  font-family: 'Roboto';
-  list-style: none;
-  line-height: 0;
-}
-
 .forumlario-contacto {
-  flex-direction: row;
   max-width: 600px;
   margin: 60px auto;
 }
@@ -312,7 +302,7 @@ label {
 input,
 textarea{
   width: 100%;
-  padding: 8px;
+  padding: 6px;
   box-sizing: border-box;
 }
 
@@ -328,18 +318,6 @@ textarea{
   background-color:hsl(258, 51%, 62%)
 }
 
-.redes {
-  padding-top: 3em;
-}
-
-.redes > a {
-  color: var(--txt-color);
-}
-
-.redes a:hover {
-  color: var(--txt-color--alt);
-  transform: scale(1.4);
-}
 
 /*Nosotros*/
 
@@ -347,6 +325,7 @@ textarea{
   display: none;
   flex-direction: column;
   padding: 2em;
+  border: 1px solid hsl(258, 47%, 49%);
 }
 
 .contenedor-nosotros > h2 {
@@ -366,6 +345,7 @@ textarea{
   display: none;
   flex-direction: row;
   padding: 2em;
+  border: 1px solid hsl(258, 47%, 49%);
 }
 
 .contenedor-tiendas > h2 {
@@ -373,31 +353,36 @@ textarea{
   padding-left: 2em;
 }
 
-.store{
-  padding-top: 2em;
+.cont-tiendas ul li {
+  justify-content: center;
+  color: var(--txt-color);
+  margin: 30px;
+  font-family: 'Roboto';
+  list-style: none;
+  line-height: 0;
 }
 
 .mapa{
-  width: 400px;
-  height: 100px; 
+  padding: 2em;
 }
 
 /*Botones footer*/
 
 .botones-footer {
   display: fixed;
-  background-color: hsl(258, 47%, 49%);
+  flex-direction: row;
+  background: var(--bg-color);
   padding: 0.1em;
-  color: aliceblue;
+  color: var(--txt-color);
   font-family: 'Roboto';
-  text-align: center;
+  width: 100%;
 }
 
 .butn {
-  width: 100px;
+  width: 10em;
   height: 50px;
   transition: transform 0.3s, box-shadow 0.3s;
-  background-color: hsl(258, 47%, 49%);
+  background: var(--bg-color);
 }
 
 .butn:hover {
@@ -405,6 +390,15 @@ textarea{
   box-shadow: 0 0 10px hsla(0, 0%, 99%, 0.794);
 }
 
+.redes {
+  color: var(--txt-color);
+  padding-right: 2em;
+}
+
+.redes:hover {
+  color: var(--txt-color--alt);
+  transform: scale(1.4);
+}
 
 /*fin footer*/
 
