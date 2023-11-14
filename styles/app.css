@@ -375,7 +375,6 @@ textarea {
 /*Botones footer*/
 
 .botones-footer {
-  position: fixed;
   flex-direction: row;
   background: var(--bg-color);
   padding: 0.1em;
