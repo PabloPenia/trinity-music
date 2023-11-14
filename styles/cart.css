@@ -8,9 +8,19 @@
   gap: 1em;
   flex: 1;
 }
+#cart-list h3 {
+  flex: 1;
+}
 #cart-list img {
   width: 50px;
 }
 #cart-list input {
   width: 3em;
+}
+.cart-qty {
+  max-height: ;
+}
+.cart-qty button {
+  font-size: 0.8em;
+  padding: 1em;
 }
