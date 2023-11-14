@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/app.css" />
   <link rel="stylesheet" href="styles/home.css" />
-  <link rel="stylesheet" href="styles/slideshow.css" />
   <link rel="icon" href="fotos/logo.ico">
   <script type="module" src="scripts/app.js" defer></script>
   <script src="scripts/slideshow.js" defer></script>
@@ -58,29 +57,29 @@
       <h1 class="hover hover__light">
         <a href="/">TrinityMusic</a>
       </h1>
-      <div class="search">
-        <label>
+      <!-- <div class="search">
+         <label>
           <span class="icon">
             <svg>
               <use href='#search-icon' />
             </svg>
           </span>
-        </label>
-        <input type="search" class="hover hover__light" placeholder="Qué estás buscando?">
-      </div>
+        </label> 
+         <input type="search" class="hover hover__light" placeholder="Qué estás buscando?"> 
+      </div> -->
       <div class="navigation">
         <nav>
           <ul class="menu">
-            <li><a class="hover hover__light" href="#instrumentos">Instrumentos</a>
-              <!-- <ul class="submenu">
-              <li><a href="#">Guitarra</a></li>
-              <li><a href="#">Bajo</a></li>
-              <li><a href="#">Percusión</a></li>
-            </ul> -->
+            <li><a class="hover hover__light" href="#tienda">Tienda</a>
             </li>
           </ul>
         </nav>
         <div class="cart-nav">
+          <button type="button"><span class="icon">
+            <svg>
+              <use href='#search-icon' />
+            </svg>
+          </span></button>
           <button id="show-cart-btn" class="hover hover__light">
             <span class="icon">
               <svg>
@@ -156,22 +155,15 @@
         </div>
       </section>
 
-      
-      <section class="instrumentos" id="instrumentos">
-        <h2>Mas Instrumentos</h2>
-        <div class="box">
-          <h2>Cuerdas</h2>
-          <img src="fotos/Img1.jpg">
+      <section id="tienda">
+        <div class="filters flex">
+          <h2>Tienda</h2>
+          <button class="btn-filter hover" value="*">Todos</button>
+          <button class="btn-filter hover" value="guitarras">Guitarras</button>
+          <button class="btn-filter hover" value="bajos">Bajos</button>
+          <button class="btn-filter hover" value="percusion">Percusion</button>
         </div>
-        <div class="box">
-          <h2>Percusión</h2>
-          <img src="fotos/Img2.jpg">
-        </div>
-        <div class="box">
-          <h2>Viento</h2>
-          <img src="fotos/Img1.jpg">
-        </div>
- 
+        <div id="filtered-products" class="cards-gallery flex"></div>
       </section>
     </main>
 

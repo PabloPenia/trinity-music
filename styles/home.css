@@ -1,3 +1,6 @@
+h2 {
+  font-size: 2em;
+}
 /* SLIDESHOW */
 .slideshow-container {
   position: relative;
@@ -133,9 +136,6 @@ button[class*=' cart-btn--'] {
 .cart-btn--remove {
   background-color: red !important;
 }
-#feat-title {
-  font-size: 2em;
-}
 .cards-gallery {
   padding-top: 2em;
   flex-wrap: wrap;
@@ -162,6 +162,28 @@ button[class*=' cart-btn--'] {
 /* RESERVAR ESTE ESPACIO */
 
 /*Mas instrumentos index linea 159*/
+#tienda {
+  padding-top: 5em;
+}
+
+.filters {
+  background: var(--bg-color);
+  padding: 0 2em;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.filters h2 {
+  margin-right: auto;
+}
+.btn-filter {
+  padding: 1em;
+}
+.btn-filter:hover,
+.btn-filter:focus,
+.btn-filter:active {
+  background-color: var(--txt-color);
+  color: var(--bg-color);
+}
 .instrumentos {
   display: flex;
   position: relative;
