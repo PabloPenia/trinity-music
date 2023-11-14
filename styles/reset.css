@@ -1,33 +1,34 @@
 /* VARIABLES */
 :root {
-  --font__base: 'Roboto', sans-serif;
-  /* transiciones */
-  --trans__on: 0.4s ease-out;
-  --trans__off: 0.4s ease-in;
-  /* tamaños y espaciado */
-  --sp__sides: 4%;
-  --sp__around: 2rem;
-  --fsz__base: 16px;
-  --border-radius: 0.4em;
-  /* Colores */
-  --bg-color: hsla(240, 46%, 15%, 1);
-  --bg-color--alpha: 240, 46%, 15%;
-  --txt-color: hsla(240, 46%, 75%, 1);
-  --txt-color--alpha: 240, 46%, 75%;
-  --txt-color--alt: hsla(240, 46%, 85%, 1);
+	--font__base: 'Nunito', sans-serif;
+	--font__headings: 'Nunito Sans', sans-serif;
+	/* transiciones */
+	--trans__on: 0.4s ease-out;
+	--trans__off: 0.4s ease-in;
+	/* tamaños y espaciado */
+	--sp__sides: 4%;
+	--sp__around: 2rem;
+	--fsz__base: 16px;
+	--border-radius: 0.4em;
+	/* Colores */
+	--bg-color: hsla(240, 46%, 15%, 1);
+	--bg-color--alpha: 240, 46%, 15%;
+	--txt-color: hsla(240, 46%, 75%, 1);
+	--txt-color--alpha: 240, 46%, 75%;
+	--txt-color--alt: hsla(240, 46%, 85%, 1);
 }
 /*
 * RESET DEFAULTS DEL BROWSER
 */
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
+	box-sizing: border-box;
+	font-size: 62.5%;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 body,
 blockquote,
@@ -43,7 +44,7 @@ ol,
 ul,
 p,
 pre {
-  margin: 0;
+	margin: 0;
 }
 
 h1,
@@ -53,41 +54,41 @@ h4,
 h5,
 h6,
 p {
-  overflow-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 img,
 video,
 canvas,
 svg {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 ul {
-  padding-left: 0;
-  list-style: none;
+	padding-left: 0;
+	list-style: none;
 }
 
 button {
-  border: 0;
-  outline: 0;
-  background: unset;
-  color: currentColor;
-  cursor: pointer;
+	border: 0;
+	outline: 0;
+	background: unset;
+	color: currentColor;
+	cursor: pointer;
 }
 
 button,
 input,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 svg {
-  fill: currentColor;
+	fill: currentColor;
 }
