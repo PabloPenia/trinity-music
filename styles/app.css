@@ -313,10 +313,12 @@ textarea{
   cursor: pointer;
   height: 50px;
   width: 100px;
+  transition: all 0.3s ease;
 }
 
 #enviar:hover {
-  background-color:hsl(258, 51%, 62%)
+  background-color:hsl(258, 51%, 62%);
+  transform: scale(1.2);
 }
 
 
