@@ -1,23 +1,27 @@
 #cart-list {
-  align-items: unset;
-  width: 100%;
+	align-items: unset;
+	width: 100%;
 }
 #cart-list > article {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	flex: 1;
+}
+#cart-list > article:hover {
+	background: var(--txt-color--alt);
+	color: var(--bg-color);
 }
 #cart-list h3 {
-  flex: 1;
+	flex: 1;
 }
 #cart-list img {
-  width: 50px;
+	width: 50px;
 }
 #cart-list input {
-  width: 3em;
+	width: 3em;
 }
 .cart-qty button {
-  font-size: 0.8em;
-  padding: 1em;
+	font-size: 0.8em;
+	padding: 1em;
 }
